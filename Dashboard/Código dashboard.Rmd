@@ -37,23 +37,36 @@ selectInput("age_levels", "Edad:", choices = unique(datos$age_category), multipl
 ### Mapa de calor
 
 ```{r}
-output$heatmap <- renderPlot({
-  selected_cntry <- input$cntry_levels
-  selected_gndr <- input$gndr_levels
-  selected_age <- input$age_levels
-  
-  data <- datos %>%
-    filter(cntry %in% selected_cntry,
-           gndr %in% selected_gndr,
-           age_category %in% selected_age) %>%
-    select(atchctr, atcherp, cntry, gndr, age_category)
- 
-  ggplot(data, aes(x = atchctr, y = atcherp, color = gndr)) +
-      geom_bin2d(bins = 20) +
-      scale_fill_viridis_c() +
-      labs(x = "Attached country", y = "Attached Europe", title = "Mapa de calor") +
-      theme_minimal() +
-      labs(title = "Correlation Plot for Selected Levels")
-  })
+plotOutput("heatmap")
+```
 
+```{r}
+shinyServer(function(input, output) {
+  output$heatmap <- renderPlot({
+    selected_cntry <- input$cntry_levels
+    selected_gndr <- input$gndr_levels
+    selected_age <- input$age_levels
+    
+    data <- datos %>%
+      filter(cntry %in% selected_cntry,
+             gndr %in% selected_gndr,
+             age_category %in% selected_age) %>%
+      filter(!is.na(atchctr) & !is.na(atcherp) & !is.na(cntry) & !is.na(gndr) & !is.na(age_category)) %>%
+      select(atchctr, atcherp, cntry, gndr, age_category)
+    
+    # Debugging: Print the filtered data to console
+    print(head(data))
+    
+    if (nrow(data) > 0) {
+      ggplot(data, aes(x = atchctr, y = atcherp, color = gndr)) +
+        geom_bin2d(bins = 20) +
+        scale_fill_viridis_c() +
+        labs(x = "Attached country", y = "Attached Europe", title = "Mapa de calor") +
+        theme_minimal()
+    } else {
+      ggplot() +
+        labs(title = "No data available for the selected filters")
+    }
+  })
+})
 ```
