@@ -1,0 +1,42 @@
+\documentclass{article}
+\usepackage{blindtext}
+\usepackage{multicol}
+\usepackage{amsmath}
+\usepackage[spanish]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=20mm,
+ top=20mm,
+ }
+\renewcommand{\refname}{Referencias}
+\renewcommand{\tablename}{Tabla}
+\title{Informe}
+\author{Mariona Puente Quera}
+\date{2024-07-18}
+
+\usepackage{Sweave}
+\begin{document}
+\input{Código_informe-concordance}
+\section*{Primeros pasos}
+\begin{itemize}
+\item knitr
+\item tinytex
+\end{itemize}
+\begin{Schunk}
+\begin{Sinput}
+> if(!require(tinytex)){
++   install.packages('tinytex')
++   library(tinytex)
++ }
+\end{Sinput}
+\end{Schunk}
+
+\begin{Schunk}
+\begin{Sinput}
+> tinytex::tlmgr_install('blindtext')
+\end{Sinput}
+\end{Schunk}
+\end{document}

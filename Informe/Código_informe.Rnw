@@ -1,0 +1,41 @@
+\documentclass{article}
+\usepackage{blindtext}
+\usepackage{multicol}
+\usepackage{amsmath}
+\usepackage[spanish]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=20mm,
+ top=20mm,
+ }
+\renewcommand{\refname}{Referencias}
+\renewcommand{\tablename}{Tabla}
+\title{Informe}
+\author{Mariona Puente Quera}
+\date{\Sexpr{Sys.Date()}}
+
+\begin{document}
+\SweaveOpts{concordance=TRUE}
+\section*{Primeros pasos}
+\begin{itemize}
+\item knitr
+\item tinytex
+\end{itemize}
+<<>>=
+if(!require(tinytex)){
+  install.packages('tinytex')
+  library(tinytex)
+}
+@
+
+<<eval=FALSE>>=
+tinytex::tlmgr_install('blindtext')
+tinytex::tlmgr_install('multicol')
+tinytex::tlmgr_install('amsmath')
+tinytex::tlmgr_install("babel-spanish")
+tinytex::tlmgr_install("grfext")
+@
+\end{document}
