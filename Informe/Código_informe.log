@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.7.23)  23 JUL 2024 17:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.7.23)  23 JUL 2024 19:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -209,19 +209,26 @@ Package babel Info: Importing font and identification data for spanish
 (babel)             from babel-es.ini. Reported on input line 11.
 ) (c:/Users/mario/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+) (c:/Users/mario/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count311
+\float@exts=\toks23
+\float@box=\box100
+\@float@everytoks=\toks24
+\@floatcapt=\box101
 ) (c:/Users/mario/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
  (c:/Users/mario/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
-\KV@toks@=\toks23
+\KV@toks@=\toks25
 ) (c:/Users/mario/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
  (c:/Users/mario/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/iftex/iftex.sty
 Package: iftex 2022/02/03 v1.0f TeX engine tests
 ))
-\Gm@cnth=\count311
-\Gm@cntv=\count312
-\c@Gm@tempcnt=\count313
+\Gm@cnth=\count312
+\Gm@cntv=\count313
+\c@Gm@tempcnt=\count314
 \Gm@bindingoffset=\dimen161
 \Gm@wd@mp=\dimen162
 \Gm@odd@mp=\dimen163
@@ -230,7 +237,7 @@ Package: iftex 2022/02/03 v1.0f TeX engine tests
 \Gm@layoutheight=\dimen166
 \Gm@layouthoffset=\dimen167
 \Gm@layoutvoffset=\dimen168
-\Gm@dimlist=\toks24
+\Gm@dimlist=\toks26
 ) (c:/Program Files/R/R-4.4.1/share/texmf/tex/latex/Sweave.sty
 Package: Sweave 
  (c:/Users/mario/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/ifthen.sty
@@ -252,11 +259,11 @@ File: pdftex.def 2024/04/13 v1.2c Graphics/color driver for pdftex
 \Gin@req@width=\dimen170
 ) (c:/Users/mario/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
 Package: fancyvrb 2024/01/20 4.5c verbatim text (tvz,hv)
-\FV@CodeLineNo=\count314
+\FV@CodeLineNo=\count315
 \FV@InFile=\read3
-\FV@TabBox=\box100
-\c@FancyVerbLine=\count315
-\FV@StepNumber=\count316
+\FV@TabBox=\box102
+\c@FancyVerbLine=\count316
+\FV@StepNumber=\count317
 \FV@OutFile=\write3
 ) (c:/Users/mario/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/textcomp.sty
 Package: textcomp 2024/04/24 v2.1b Standard LaTeX package
@@ -264,30 +271,30 @@ Package: textcomp 2024/04/24 v2.1b Standard LaTeX package
 Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
 )) (c:/Users/mario/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count317
-\l__pdf_internal_box=\box101
+\l__color_backend_stack_int=\count318
+\l__pdf_internal_box=\box103
 ) (./Código_informe.aux
 LaTeX Info: Redefining \. on input line 8.
 LaTeX Info: Redefining \% on input line 8.
 )
 \openout1 = `Código_informe.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Info: Redefining \. on input line 21.
-LaTeX Info: Redefining \% on input line 21.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Info: Redefining \. on input line 22.
+LaTeX Info: Redefining \% on input line 22.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -350,11 +357,11 @@ Package grfext Info: Graphics extension search list:
  (c:/Users/mario/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 )) (./Código_informe-concordance.tex)
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 30.
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 27.
  (c:/Users/mario/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
-LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 32.
+LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 29.
  (c:/Users/mario/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/ts1cmtt.fd
 File: ts1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
@@ -365,29 +372,66 @@ File: ts1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 <Código_informe-003.pdf, id=14, 433.62pt x 433.62pt>
 File: Código_informe-003.pdf Graphic file (type pdf)
 <use Código_informe-003.pdf>
-Package pdftex.def Info: Código_informe-003.pdf  used on input line 94.
+Package pdftex.def Info: Código_informe-003.pdf  used on input line 92.
 (pdftex.def)             Requested size: 386.95894pt x 386.97923pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
+<Imatge1.png, id=15, 610.53094pt x 265.74281pt>
+File: Imatge1.png Graphic file (type png)
+<use Imatge1.png>
+Package pdftex.def Info: Imatge1.png  used on input line 115.
+(pdftex.def)             Requested size: 483.69684pt x 210.54276pt.
 
 
 [2 <./Código_informe-003.pdf>]
-Overfull \hbox (10.01971pt too wide) in paragraph at lines 123--135
+Overfull \hbox (10.01971pt too wide) in paragraph at lines 127--139
 [][] 
  []
 
+<Imatge2.png, id=26, 422.32782pt x 541.27219pt>
+File: Imatge2.png Graphic file (type png)
+<use Imatge2.png>
+Package pdftex.def Info: Imatge2.png  used on input line 143.
+(pdftex.def)             Requested size: 483.69684pt x 619.93913pt.
 
-Overfull \hbox (1.74396pt too wide) in paragraph at lines 145--165
-[][] 
+
+[3 <./Imatge1.png>]
+Overfull \hbox (2.77344pt too wide) in paragraph at lines 147--147
+[]\T1/cmr/bx/n/14.4 Estudiar los efec-tos de la vari-able na-cional-i-dad en dicha cor-relaci�n. 
  []
 
 
 
-[3]
+[4 <./Imatge2.png>]
+Overfull \hbox (1.74396pt too wide) in paragraph at lines 155--175
+[][] 
+ []
 
-[4] (./Código_informe.aux
+<Imatge3.png, id=35, 563.85657pt x 490.08093pt>
+File: Imatge3.png Graphic file (type png)
+<use Imatge3.png>
+Package pdftex.def Info: Imatge3.png  used on input line 179.
+(pdftex.def)             Requested size: 483.69684pt x 420.41447pt.
+<Imatge4.png, id=36, 478.03593pt x 577.40718pt>
+File: Imatge4.png Graphic file (type png)
+<use Imatge4.png>
+Package pdftex.def Info: Imatge4.png  used on input line 185.
+(pdftex.def)             Requested size: 483.69684pt x 584.24272pt.
+
+
+[5 <./Imatge3.png>]
+<Imatge5.png, id=41, 629.35126pt x 508.90125pt>
+File: Imatge5.png Graphic file (type png)
+<use Imatge5.png>
+Package pdftex.def Info: Imatge5.png  used on input line 191.
+(pdftex.def)             Requested size: 483.69684pt x 391.12524pt.
+
+
+[6 <./Imatge4.png>]
+
+[7 <./Imatge5.png>] (./Código_informe.aux
 LaTeX Info: Redefining \. on input line 8.
 LaTeX Info: Redefining \% on input line 8.
 )
@@ -397,18 +441,18 @@ L3 programming layer <2024-05-27>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 5343 strings out of 475543
- 89292 string characters out of 5775459
- 1946908 words of memory out of 5000000
- 27905 multiletter control sequences out of 15000+600000
+ 5452 strings out of 475543
+ 91122 string characters out of 5775459
+ 1936908 words of memory out of 5000000
+ 28010 multiletter control sequences out of 15000+600000
  567473 words of font info for 59 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 72i,8n,79p,343b,365s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <c:/Users/mario/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1000.600pk> <c:/Users/mario/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/tcst1000.600pk> <c:/Users/mario/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecst1000.600pk> <c:/Users/mario/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> <c:/Users/mario/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> <c:/Users/mario/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> <c:/Users/mario/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1728.600pk>
-Output written on Código_informe.pdf (4 pages, 73979 bytes).
+ 72i,8n,79p,330b,365s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <c:/Users/mario/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1000.600pk> <c:/Users/mario/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> <c:/Users/mario/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/tcst1000.600pk> <c:/Users/mario/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecst1000.600pk> <c:/Users/mario/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> <c:/Users/mario/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> <c:/Users/mario/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1728.600pk>
+Output written on Código_informe.pdf (7 pages, 451170 bytes).
 PDF statistics:
- 264 PDF objects out of 1000 (max. 8388607)
- 42 compressed objects within 1 object stream
+ 285 PDF objects out of 1000 (max. 8388607)
+ 51 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 10 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 35 words of extra memory for PDF output out of 10000 (max. 10000000)
 

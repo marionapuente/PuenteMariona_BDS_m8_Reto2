@@ -4,6 +4,7 @@
 \usepackage{amsmath}
 \usepackage[spanish]{babel}
 \usepackage[T1]{fontenc}
+\usepackage{float}
 \usepackage{geometry}
  \geometry{
  a4paper,
@@ -21,10 +22,6 @@
 \maketitle
 \SweaveOpts{concordance=TRUE}
 \section*{Primeros pasos}
-\begin{itemize}
-\item knitr
-\item tinytex
-\end{itemize}
 <<>>=
 if(!require(tinytex)){
   install.packages('tinytex')
@@ -37,6 +34,7 @@ tinytex::tlmgr_install('blindtext')
 tinytex::tlmgr_install('amsmath')
 tinytex::tlmgr_install("babel-spanish")
 tinytex::tlmgr_install("grfext")
+tinytex::tlmgr_install("float")
 @
 
 \section*{Objetivos iniciales}
@@ -109,6 +107,12 @@ print(heatmap_plot)
  \end{tabular}
  \end{table}
 
+ \begin{figure}[H]
+ \centering
+ \includegraphics[width=1\textwidth]{Imatge1.png}
+ \caption{Visualización de las correlaciones}
+ \end{figure}
+
 \section{Estudiar los efectos de la variable edad en dicha correlación.}
  \begin{itemize}
  \item D.E. = Desviación estándard
@@ -130,6 +134,12 @@ print(heatmap_plot)
  \hline
  \end{tabular}
  \end{table}
+ 
+ \begin{figure}[H]
+ \centering
+ \includegraphics[width=1\textwidth]{Imatge2.png}
+ \caption{Visualización de las correlaciones}
+ \end{figure}
 
 \section{Estudiar los efectos de la variable nacionalidad en dicha correlación.}
  \begin{itemize}
@@ -160,6 +170,24 @@ print(heatmap_plot)
  \hline
  \end{tabular}
  \end{table}
+
+ \begin{figure}[H]
+ \centering
+ \includegraphics[width=1\textwidth]{Imatge3.png}
+ \caption{Visualización de las correlaciones}
+ \end{figure}
+
+ \begin{figure}[H]
+ \centering
+ \includegraphics[width=1\textwidth]{Imatge4.png}
+ \caption{}
+ \end{figure}
+
+ \begin{figure}[H]
+ \centering
+ \includegraphics[width=1\textwidth]{Imatge5.png}
+ \caption{Visualización de las correlaciones}
+ \end{figure}
 
 \section{Estudiar cómo correlacionan el apego emocional al propio país y el apego emocional a Europa entre diferentes subgrupos a escoger de entre los diferentes niveles de nuestras variables demográficas.}
 
