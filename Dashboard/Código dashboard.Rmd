@@ -16,13 +16,14 @@ library(shiny)
 library(dplyr)
 library(ggplot2)
 library(patchwork)
+library(tidyr)
 ```
 
 ```{r}
 datos <- read.csv('Base de datos depurada.csv')
 ```
 
-## Column {data-width="300"}
+## Column {data-width="250"}
 
 ### Opciones
 
@@ -32,7 +33,7 @@ selectInput("Género_levels", "Género:", choices = c("Todos", unique(datos$Gén
 selectInput("Rango.de.edad_levels", "Rango de edad:", choices = c("Todos", unique(datos$Rango.de.edad)), multiple = TRUE)
 ```
 
-## Column {data-width="700"}
+## Column {data-width="600"}
 
 ### Mapa de calor
 
@@ -83,5 +84,35 @@ renderPlot({
   heatmap_plot <- heatmap_plot +
     geom_path(data = df_prop_y, aes(x = prop, y = Apego.emocional.a.Europa), color = "black", size = 1)
   print(heatmap_plot)
+})
+```
+
+## Column {data-width="150"}
+
+### Correlación de Pearson
+
+```{r}
+renderText({
+  selected_País <- input$País_levels
+  selected_Género <- input$Género_levels
+  selected_Rango.de.edad <- input$Rango.de.edad_levels
+  
+  if ("Todos" %in% selected_País) {
+    selected_País <- unique(datos$País)
+  }
+  if ("Todos" %in% selected_Género) {
+    selected_Género <- unique(datos$Género)
+  }
+  if ("Todos" %in% selected_Rango.de.edad) {
+    selected_Rango.de.edad <- unique(datos$Rango.de.edad)
+  }
+  
+  data <- datos %>%
+    filter(País %in% selected_País,
+           Género %in% selected_Género,
+           Rango.de.edad %in% selected_Rango.de.edad) %>%
+    select(Apego.emocional.al.propio.país, Apego.emocional.a.Europa) %>%
+    drop_na()
+  print(round(cor(data$Apego.emocional.al.propio.país, data$Apego.emocional.a.Europa),2))
 })
 ```
