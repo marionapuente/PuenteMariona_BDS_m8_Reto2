@@ -14,7 +14,7 @@
  }
 \renewcommand{\refname}{Referencias}
 \renewcommand{\tablename}{Tabla}
-\title{Informe}
+\title{Informe: Estudio del apego emocional al propio país y a Europa}
 \author{Mariona Puente Quera}
 \date{\Sexpr{Sys.Date()}}
 
@@ -88,7 +88,7 @@ heatmap_plot <- heatmap_plot +
 print(heatmap_plot)
 @
 
-\section{Estudiar los efectos de la variable género en dicha correlación.}
+\section{Estudiar y visualizar los efectos de la variable género en dicha correlación.}
  \begin{itemize}
  \item D.E. = Desviación estándard
  \item AEPP = Apego emocional al propio país
@@ -113,7 +113,7 @@ print(heatmap_plot)
  \caption{Visualización de las correlaciones}
  \end{figure}
 
-\section{Estudiar los efectos de la variable edad en dicha correlación.}
+\section{Estudiar y visualizar los efectos de la variable edad en dicha correlación.}
  \begin{itemize}
  \item D.E. = Desviación estándard
  \item AEPP = Apego emocional al propio país
@@ -140,8 +140,8 @@ print(heatmap_plot)
  \includegraphics[width=1\textwidth]{Imatge2.png}
  \caption{Visualización de las correlaciones}
  \end{figure}
-
-\section{Estudiar los efectos de la variable nacionalidad en dicha correlación.}
+ 
+\section{Estudiar y visualizar los efectos de la variable nacionalidad en dicha correlación.}
  \begin{itemize}
  \item D.E. = Desviación estándard
  \item AEPP = Apego emocional al propio país
@@ -180,7 +180,7 @@ print(heatmap_plot)
  \begin{figure}[H]
  \centering
  \includegraphics[width=1\textwidth]{Imatge4.png}
- \caption{}
+ \caption{Visualización de las correlaciones}
  \end{figure}
 
  \begin{figure}[H]
@@ -188,11 +188,38 @@ print(heatmap_plot)
  \includegraphics[width=1\textwidth]{Imatge5.png}
  \caption{Visualización de las correlaciones}
  \end{figure}
+ 
+Hay un claro parecido de gráficos entre los países más occidentales, los más orientales y los escandinavos. Además, cabe destacar que el Reino Unido radicaliza la tendencia de los países más occidentales.
+Así pues, el país sí que influye en como se relacionan la variable de apego emocional al propio país y a Europa. Se pueden observar tanto cambios en la intensidad en como se correlacionan, como en qué nivel de apego tanto al país como a Europa son los más correlacionados.
 
-\section{Estudiar cómo correlacionan el apego emocional al propio país y el apego emocional a Europa entre diferentes subgrupos a escoger de entre los diferentes niveles de nuestras variables demográficas.}
+\section{Estudiar y visualizar cómo correlacionan el apego emocional al propio país y el apego emocional a Europa entre diferentes subgrupos a escoger de entre los diferentes niveles de nuestras variables demográficas.}
+
+El dashboard generado nos permite también visualizar todos los subconjuntos de muestras posibles de crear de entre todas las categorías de cada variable demográfica. Escogiendo una única categoría en cada variable demográfica podemos obtener un total de 130 submuestras diferentes.
+Seguidamente mostramos la submuestra que presenta una correlación de Pearson mayor:
+ \begin{figure}[H]
+ \centering
+ \includegraphics[width=0.7\textwidth]{Imatge6.png}
+ \caption{Visualización de las correlaciones}
+ \end{figure}
+Dicha submuestra está compuesta por los hombres de 75 años o mayores de Lituania. La correlación que obtienen es de 0.7458912, claro que se trata de una muestra muy pequeña comparada con el total de observaciones de las que disponemos en la muestra total, y no es representativa.
+
+Mostramos ahora la submuestra que presenta una correlación de Pearson menor:
+ \begin{figure}[H]
+ \centering
+ \includegraphics[width=0.7\textwidth]{Imatge7.png}
+ \caption{Visualización de las correlaciones}
+ \end{figure}
+Dicha submuestra está compuesta por las mujeres de 75 años o mayores de Noruega. La correlación que obtienen es de 0.08331454, igualmente se trata de una muestra muy pequeña comparada con el total de observaciones, y tampoco es representativa.
+
+El dashboard nos permite además escoger múltiples opciones de categorías de entre las variables demográficas. Esto resulta en una infinidad de opciones, el análisis de las cuales escapa los objetivos de este informe.
 
 \section*{Conclusiones}
 
+Los resultados obtenidos en este informe nos permiten concluir que no se observan diferencias entre mujeres y hombres en la correlación de las variables 'Apego emocional al propio país' y 'Apego emocional a Europa', además los valores obtenidos en la correlación de Pearson nos permiten afirmar que no hay diferencias significativas en dicha correlación entre los hombres y mujeres que conforman nuestra muestra.
+
+Por lo que hace a la variable demográfica 'edad' podemos observar que sí que influye en como se relacionan la variable de apego emocional al propio país y a Europa. Podemos observar cambios en qué nivel de apego tanto al país como a Europa son los más correlacionados. A medida que aumenta la edad, dicho nivel de correlación del apego entre el país y Europa se mueve desde valores moderados hasta los valores más elevados de apego. Los valores de la correlación que observamos en la tabla nos permiten ver como el rango de edad (o la generación) que obtiene una correlación menor es el rango de '75 o mayores' (0.3832552) y el rango que obtiene una correlación mayor es precisamente el rango de los más jóvenes 'menores de 30' (0.4800369). Tal y como observamos en los gráficos, la correlación de Pearson nos permite también concluir que en nuestra muestra a medida que aumenta la edad aumenta la correlación, con un estancamiento ...
+
 Lógicamente la última fila de cada tabla es la misma, puesto que está compuesta de la muestra completa.
+Así pues, el rango de valores de las correlaciones obtenidas en cada subconjunto de variables es muy ámplio.
 
 \end{document}
