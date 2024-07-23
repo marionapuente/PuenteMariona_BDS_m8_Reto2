@@ -1,0 +1,86 @@
+---
+title: "Apego emocional al propio país y a Europa"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+    source_code: embed
+runtime: shiny
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(dplyr)
+library(shiny)
+library(dplyr)
+library(ggplot2)
+library(patchwork)
+```
+
+```{r}
+datos <- read.csv('Base de datos depurada.csv')
+```
+
+## Column {data-width="300"}
+
+### Opciones
+
+```{r}
+selectInput("País_levels", "Países:", choices = c("Todos", unique(datos$País)), multiple = TRUE)
+selectInput("Género_levels", "Género:", choices = c("Todos", unique(datos$Género)), multiple = TRUE)
+selectInput("Rango.de.edad_levels", "Rango de edad:", choices = c("Todos", unique(datos$Rango.de.edad)), multiple = TRUE)
+```
+
+## Column {data-width="700"}
+
+### Mapa de calor
+
+```{r}
+renderPlot({
+  selected_País <- input$País_levels
+  selected_Género <- input$Género_levels
+  selected_Rango.de.edad <- input$Rango.de.edad_levels
+  
+  if ("Todos" %in% selected_País) {
+    selected_País <- unique(datos$País)
+  }
+  if ("Todos" %in% selected_Género) {
+    selected_Género <- unique(datos$Género)
+  }
+  if ("Todos" %in% selected_Rango.de.edad) {
+    selected_Rango.de.edad <- unique(datos$Rango.de.edad)
+  }
+  
+  data <- datos %>%
+    filter(País %in% selected_País,
+           Género %in% selected_Género,
+           Rango.de.edad %in% selected_Rango.de.edad) %>%
+    select(Apego.emocional.al.propio.país, Apego.emocional.a.Europa, País, Género, Rango.de.edad)
+  
+  df_prop_x <- data %>%
+    filter(!is.na(Apego.emocional.al.propio.país)) %>%
+    group_by(Apego.emocional.al.propio.país) %>%
+    summarise(count = n()) %>%
+    mutate(prop = (count / sum(count)) * 20)
+  
+  df_prop_y <- data %>%
+    filter(!is.na(Apego.emocional.a.Europa)) %>%
+    group_by(Apego.emocional.a.Europa) %>%
+    summarise(count = n()) %>%
+    mutate(prop = (count / sum(count)) * 20)
+  
+  heatmap_plot <- ggplot(data, aes(x = Apego.emocional.al.propio.país, y = Apego.emocional.a.Europa)) +
+    geom_bin2d(bins = 20, aes(fill = ..count..)) +
+    scale_fill_distiller(palette = "Spectral") +
+    labs(x = "Apego emocional al propio país", y = "Apego emocional a Europa", title = "Mapa de calor") +
+    theme_minimal()
+  
+  heatmap_plot <- heatmap_plot +
+    geom_line(data = df_prop_x, aes(x = Apego.emocional.al.propio.país, y = prop), color = "black", size = 1)
+  
+  # Add the y-axis density line correctly
+  heatmap_plot <- heatmap_plot +
+    geom_path(data = df_prop_y, aes(x = prop, y = Apego.emocional.a.Europa), color = "black", size = 1)
+  print(heatmap_plot)
+})
+```

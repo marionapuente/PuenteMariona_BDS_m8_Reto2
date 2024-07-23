@@ -8,28 +8,22 @@ df <- read.csv('Base de datos original.csv')
 
 # Eliminar las variables que no vamos a utilizar
 
-df <- select(df, -"name", -"essround", -"edition", -"proddate", -"dweight", -"pweight", -"prob", -"stratum", -"psu")
+df <- select(df, -"idno", -"name", -"essround", -"edition", -"proddate", -"dweight", -"pweight", -"prob", -"stratum", -"psu", -"freehms", -"lrnobed", -"impcntr", -"wrclmch")
 
 # Recodificar los valores de las varirables cualitativas
 
 country_mapping <- c(
-  AL = "Albania", AT = "Austria", BE = "Belgium", BG = "Bulgaria", CH = "Switzerland",
-  CY = "Cyprus", CZ = "Czechia", DE = "Germany", DK = "Denmark", EE = "Estonia",
-  ES = "Spain", FI = "Finland", FR = "France", GB = "United Kingdom", GE = "Georgia",
-  GR = "Greece", HR = "Croatia", HU = "Hungary", IE = "Ireland", IS = "Iceland",
-  IL = "Israel", IT = "Italy", LT = "Lithuania", LU = "Luxembourg", LV = "Latvia",
-  ME = "Montenegro", MK = "North Macedonia", NL = "Netherlands", NO = "Norway",
-  PL = "Poland", PT = "Portugal", RO = "Romania", RS = "Serbia", RU = "Russian Federation",
-  SE = "Sweden", SI = "Slovenia", SK = "Slovakia", TR = "Turkey", UA = "Ukraine",
-  XK = "Kosovo"
+  AT = "Áustria", CH = "Suiza", DE = "Alemania", FI = "Finlandia", GB = "Reino Unido",
+  HR = "Croacia", HU = "Hungría", LT = "Lituania", NL = "Países Bajos", NO = "Noruega",
+  IE = "Irlanda", SI = "Eslovenia", SK = "Eslovaquia"
 )
 df <- df %>%
   mutate(cntry = recode(cntry, !!!country_mapping))
 df$cntry <- factor(df$cntry)
 
 gender_mapping <- c(
-  `1` = "Male",
-  `2` = "Female",
+  `1` = "Hombre",
+  `2` = "Mujer",
   `9` = "No answer"
 )
 df <- df %>%
@@ -43,10 +37,6 @@ df[df == 999] <- NA
 df[df == 77] <- NA
 df[df == 88] <- NA
 df[df == 99] <- NA
-df$freehms[df$freehms %in% c(7, 8, 9)] <- NA
-df$lrnobed[df$lrnobed %in% c(7, 8, 9)] <- NA
-df$impcntr[df$impcntr %in% c(7, 8, 9)] <- NA
-df$wrclmch[df$wrclmch %in% c(6, 7, 8, 9)] <- NA
 
 # Recodificar variable edad en cualitativa
 
@@ -57,6 +47,12 @@ df$age_category <- cut(
   right = TRUE
 )
 df$age_category <- factor(df$age_category)
+
+df <- select(df, -"agea")
+
+# Recodificar nombres de las variables
+
+names(df) <- c("País", "Apego emocional al propio país", "Apego emocional a Europa", "Género", "Rango de edad")
 
 # Guardar base de datos depurada
 
