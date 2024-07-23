@@ -1,5 +1,6 @@
 ---
 title: "Apego emocional al propio país y a Europa"
+author: "Mariona Puente Quera"
 output: 
   flexdashboard::flex_dashboard:
     orientation: columns
