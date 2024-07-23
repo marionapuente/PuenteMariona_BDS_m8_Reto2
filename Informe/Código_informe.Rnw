@@ -18,6 +18,7 @@
 \date{\Sexpr{Sys.Date()}}
 
 \begin{document}
+\maketitle
 \SweaveOpts{concordance=TRUE}
 \section*{Primeros pasos}
 \begin{itemize}
@@ -33,9 +34,39 @@ if(!require(tinytex)){
 
 <<eval=FALSE>>=
 tinytex::tlmgr_install('blindtext')
-tinytex::tlmgr_install('multicol')
 tinytex::tlmgr_install('amsmath')
 tinytex::tlmgr_install("babel-spanish")
 tinytex::tlmgr_install("grfext")
 @
+
+\section*{Objetivos iniciales}
+Los objetivos propuestos inicialmente en el proyecto son los siguientes:
+
+\begin{itemize}
+    \item \textbf{OBJETIVO GENERAL:} Estudiar cómo correlacionan el apego emocional al propio país y el apego emocional a Europa, y el efecto del género, de la edad y de la nacionalidad en dicha correlación.
+    \item \textbf{OBJETIVOS ESPECÍFICOS:}
+    \begin{enumerate}
+        \item Estudiar y visualizar cómo correlacionan el apego emocional al propio país y el apego emocional a Europa en nuestra muestra.
+        \item Estudiar y visualizar los efectos de la variable género en dicha correlación.
+        \item Estudiar y visualizar los efectos de la variable edad en dicha correlación.
+        \item Estudiar y visualizar los efectos de la variable nacionalidad en dicha correlación.
+        \item Estudiar y visualizar cómo correlacionan el apego emocional al propio país y el apego emocional a Europa entre diferentes subgrupos a escoger de entre los diferentes niveles de nuestras variables demográficas.
+    \end{enumerate}
+\end{itemize}
+Con tal de analizar los resultados proporcionados por el dashboard estudiaremos cada objetivo específico por separado a continuación.
+
+\section*{Resultados}
+
+\section{Estudiar y visualizar cómo correlacionan el apego emocional al propio país y el apego emocional a Europa en nuestra muestra.}
+
+\section{Estudiar y visualizar los efectos de la variable género en dicha correlación.}
+
+\section{Estudiar y visualizar los efectos de la variable edad en dicha correlación.}
+
+\section{Estudiar y visualizar los efectos de la variable nacionalidad en dicha correlación.}
+
+\section{Estudiar y visualizar cómo correlacionan el apego emocional al propio país y el apego emocional a Europa entre diferentes subgrupos a escoger de entre los diferentes niveles de nuestras variables demográficas.}
+
+\section*{Conclusiones}
+
 \end{document}
