@@ -98,7 +98,7 @@ print(heatmap_plot)
  \end{itemize}
  \begin{table}[h!]
  \caption{Variable género}
- \begin{tabular}{l | c c}
+ \begin{tabular}{l | c c c c c}
  \hline
  \bf{Género} & \bf{Media 'AEPP'} & \bf{D.E. 'AEPP'} & \bf{Media 'AEE'} & \bf{D.E. 'AEE'} & \bf{CORR. PEARSON} \\
  \hline
