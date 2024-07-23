@@ -79,10 +79,9 @@ renderPlot({
   
   heatmap_plot <- heatmap_plot +
     geom_line(data = df_prop_x, aes(x = Apego.emocional.al.propio.país, y = prop), color = "black", size = 1)
-  
-  # Add the y-axis density line correctly
   heatmap_plot <- heatmap_plot +
     geom_path(data = df_prop_y, aes(x = prop, y = Apego.emocional.a.Europa), color = "black", size = 1)
+  
   print(heatmap_plot)
 })
 ```

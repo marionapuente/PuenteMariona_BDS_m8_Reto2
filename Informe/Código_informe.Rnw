@@ -59,6 +59,37 @@ Con tal de analizar los resultados proporcionados por el dashboard estudiaremos 
 
 \section{Estudiar y visualizar cómo correlacionan el apego emocional al propio país y el apego emocional a Europa en nuestra muestra.}
 
+<<echo=TRUE, fig=TRUE, fig.width=5, fig.height=5>>=
+library(ggplot2)
+library(dplyr)
+data <- read.csv('Base de datos depurada.csv')
+
+df_prop_x <- data %>%
+  filter(!is.na(Apego.emocional.al.propio.país)) %>%
+  group_by(Apego.emocional.al.propio.país) %>%
+  summarise(count = n()) %>%
+  mutate(prop = (count / sum(count)) * 20)
+  
+df_prop_y <- data %>%
+  filter(!is.na(Apego.emocional.a.Europa)) %>%
+  group_by(Apego.emocional.a.Europa) %>%
+  summarise(count = n()) %>%
+  mutate(prop = (count / sum(count)) * 20)
+  
+heatmap_plot <- ggplot(data, aes(x = Apego.emocional.al.propio.país, y = Apego.emocional.a.Europa)) +
+  geom_bin2d(bins = 20, aes(fill = ..count..)) +
+  scale_fill_distiller(palette = "Spectral") +
+  labs(x = "Apego emocional al propio país", y = "Apego emocional a Europa", title = "Mapa de calor") +
+  theme_minimal()
+  
+heatmap_plot <- heatmap_plot +
+  geom_line(data = df_prop_x, aes(x = Apego.emocional.al.propio.país, y = prop), color = "black", size = 1)
+heatmap_plot <- heatmap_plot +
+  geom_path(data = df_prop_y, aes(x = prop, y = Apego.emocional.a.Europa), color = "black", size = 1)
+
+print(heatmap_plot)
+@
+
 \section{Estudiar y visualizar los efectos de la variable género en dicha correlación.}
  \begin{itemize}
  \item D.E. = Desviación estándard
@@ -67,7 +98,7 @@ Con tal de analizar los resultados proporcionados por el dashboard estudiaremos 
  \end{itemize}
  \begin{table}[h!]
  \caption{Variable género}
- \begin{tabular}{l | c c c c c}
+ \begin{tabular}{l | c c}
  \hline
  \bf{Género} & \bf{Media 'AEPP'} & \bf{D.E. 'AEPP'} & \bf{Media 'AEE'} & \bf{D.E. 'AEE'} & \bf{CORR. PEARSON} \\
  \hline
