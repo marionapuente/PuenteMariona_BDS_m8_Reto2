@@ -1,0 +1,225 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+  ignorenonframetext,
+]{beamer}
+\usepackage{pgfpages}
+\setbeamertemplate{caption}[numbered]
+\setbeamertemplate{caption label separator}{: }
+\setbeamercolor{caption name}{fg=normal text.fg}
+\beamertemplatenavigationsymbolsempty
+% Prevent slide breaks in the middle of a paragraph
+\widowpenalties 1 10000
+\raggedbottom
+\setbeamertemplate{part page}{
+  \centering
+  \begin{beamercolorbox}[sep=16pt,center]{part title}
+    \usebeamerfont{part title}\insertpart\par
+  \end{beamercolorbox}
+}
+\setbeamertemplate{section page}{
+  \centering
+  \begin{beamercolorbox}[sep=12pt,center]{part title}
+    \usebeamerfont{section title}\insertsection\par
+  \end{beamercolorbox}
+}
+\setbeamertemplate{subsection page}{
+  \centering
+  \begin{beamercolorbox}[sep=8pt,center]{part title}
+    \usebeamerfont{subsection title}\insertsubsection\par
+  \end{beamercolorbox}
+}
+\AtBeginPart{
+  \frame{\partpage}
+}
+\AtBeginSection{
+  \ifbibliography
+  \else
+    \frame{\sectionpage}
+  \fi
+}
+\AtBeginSubsection{
+  \frame{\subsectionpage}
+}
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\newif\ifbibliography
+\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+\usepackage{caption}
+% Make caption package work with longtable
+\makeatletter
+\def\fnum@table{\tablename~\thetable}
+\makeatother
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Presentación: APEGO EMOCIONAL AL PROPIO PAÍS Y A EUROPA},
+  pdfauthor={Mariona Puente Quera},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Presentación: APEGO EMOCIONAL AL PROPIO PAÍS Y A EUROPA}
+\author{Mariona Puente Quera}
+\date{2024-07-23}
+
+\begin{document}
+\frame{\titlepage}
+
+\begin{frame}{ÍNDICE}
+\phantomsection\label{uxedndice}
+\begin{enumerate}
+\tightlist
+\item
+  Objetivos
+\item
+  Resultados Estudiar y visualizar cómo correlacionan el apego emocional
+  al propio país y el apego emocional a Europa en nuestra muestra.
+  \ldots{}
+\end{enumerate}
+\end{frame}
+
+\begin{frame}{OBJETIVOS}
+\phantomsection\label{objetivos}
+OBJETIVO GENERAL: Estudiar cómo correlacionan el apego emocional al
+propio país y el apego emocional a Europa, y el efecto del género, de la
+edad y de la nacionalidad en dicha correlación. OBJETIVOS ESPECÍFICOS:
+1. Estudiar y visualizar cómo correlacionan el apego emocional al propio
+país y el apego emocional a Europa en nuestra muestra. 2. Estudiar y
+visualizar los efectos de la variable género en dicha correlación. 3.
+Estudiar y visualizar los efectos de la variable edad en dicha
+correlación. 4. Estudiar y visualizar los efectos de la variable
+nacionalidad en dicha correlación. 5. Estudiar y visualizar cómo
+correlacionan el apego emocional al propio país y el apego emocional a
+Europa entre diferentes subgrupos a escoger de entre los diferentes
+niveles de nuestras variables demográficas.
+\end{frame}
+
+\begin{frame}{RESULTADOS}
+\phantomsection\label{resultados}
+Con tal de analizar los resultados proporcionados por el dashboard
+estudiaremos cada objetivo específico por separado a continuación:
+\end{frame}
+
+\begin{frame}[fragile]{1. Estudiar y visualizar cómo correlacionan el
+apego emocional al propio país y el apego emocional a Europa en nuestra
+muestra.}
+\phantomsection\label{estudiar-y-visualizar-cuxf3mo-correlacionan-el-apego-emocional-al-propio-pauxeds-y-el-apego-emocional-a-europa-en-nuestra-muestra.}
+\begin{verbatim}
+## 
+## S'està adjuntant el paquet: 'dplyr'
+\end{verbatim}
+
+\begin{verbatim}
+## Els següents objectes estan emmascarats des de 'package:stats':
+## 
+##     filter, lag
+\end{verbatim}
+
+\begin{verbatim}
+## Els següents objectes estan emmascarats des de 'package:base':
+## 
+##     intersect, setdiff, setequal, union
+\end{verbatim}
+
+\begin{verbatim}
+## Warning: Removed 273 rows containing non-finite outside the scale range
+## (`stat_bin2d()`).
+\end{verbatim}
+
+\includegraphics{Presentación_files/figure-beamer/unnamed-chunk-1-1.pdf}
+\end{frame}
+
+\begin{frame}{2. Estudiar y visualizar los efectos de la variable género
+en dicha correlación.}
+\phantomsection\label{estudiar-y-visualizar-los-efectos-de-la-variable-guxe9nero-en-dicha-correlaciuxf3n.}
+\begin{longtable}[]{@{}
+  >{\centering\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1212}}
+  >{\centering\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1818}}
+  >{\centering\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1717}}
+  >{\centering\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1717}}
+  >{\centering\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1616}}
+  >{\centering\arraybackslash}p{(\columnwidth - 10\tabcolsep) * \real{0.1919}}@{}}
+\toprule\noalign{}
+\begin{minipage}[b]{\linewidth}\centering
+\textbf{Género}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+\textbf{Media `AEPP'}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+\textbf{D.E. `AEPP'}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+\textbf{Media `AEE'}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+\textbf{D.E. `AEE'}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+\textbf{CORR. PEARSON}
+\end{minipage} \\
+\midrule\noalign{}
+\endhead
+Mujeres & 7.837861 & 2.145087 & 6.270493 & 2.471481 & 0.4100358 \\
+Hombres & 7.693225 & 2.210150 & 6.097755 & 2.525251 & 0.4146855 \\
+\href{mailto:Tod@s}{\nolinkurl{Tod@s}} & 7.770864 & 2.176612 & 6.190264
+& 2.498028 & 0.4128778 \\
+\bottomrule\noalign{}
+\end{longtable}
+\end{frame}
+
+\begin{frame}{Slide with Plot}
+\phantomsection\label{slide-with-plot}
+\includegraphics{Presentación_files/figure-beamer/pressure-1.pdf}
+\end{frame}
+
+\end{document}

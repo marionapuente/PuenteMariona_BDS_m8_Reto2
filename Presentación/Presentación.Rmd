@@ -1,0 +1,84 @@
+---
+title: "Presentación: APEGO EMOCIONAL AL PROPIO PAÍS Y A EUROPA"
+author: "Mariona Puente Quera"
+date: "2024-07-23"
+output: beamer_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## ÍNDICE
+1. Objetivos
+2. Resultados
+Estudiar y visualizar cómo correlacionan el apego emocional al propio país y el apego emocional a Europa en nuestra muestra.
+...
+
+## OBJETIVOS
+
+OBJETIVO GENERAL: Estudiar cómo correlacionan el apego emocional al propio país y el apego
+emocional a Europa, y el efecto del género, de la edad y de la nacionalidad en dicha correlación.
+OBJETIVOS ESPECÍFICOS:
+1. Estudiar y visualizar cómo correlacionan el apego emocional al propio país y el apego emocional a
+Europa en nuestra muestra.
+2. Estudiar y visualizar los efectos de la variable género en dicha correlación.
+3. Estudiar y visualizar los efectos de la variable edad en dicha correlación.
+4. Estudiar y visualizar los efectos de la variable nacionalidad en dicha correlación.
+5. Estudiar y visualizar cómo correlacionan el apego emocional al propio país y el apego emocional
+a Europa entre diferentes subgrupos a escoger de entre los diferentes niveles de nuestras variables
+demográficas.
+
+## RESULTADOS
+Con tal de analizar los resultados proporcionados por el dashboard estudiaremos cada objetivo específico por separado a continuación:
+
+## 1. Estudiar y visualizar cómo correlacionan el apego emocional al propio país y el apego emocional a Europa en nuestra muestra.
+
+```{r, echo = FALSE}
+library(ggplot2)
+library(dplyr)
+data <- read.csv('Base de datos depurada.csv')
+df_prop_x <- data %>%
+  filter(!is.na(Apego.emocional.al.propio.país)) %>%
+  group_by(Apego.emocional.al.propio.país) %>%
+  summarise(count = n()) %>%
+  mutate(prop = (count / sum(count)) * 20)
+
+df_prop_y <- data %>%
+  filter(!is.na(Apego.emocional.a.Europa)) %>%
+  group_by(Apego.emocional.a.Europa) %>%
+  summarise(count = n()) %>%
+  mutate(prop = (count / sum(count)) * 20)
+
+heatmap_plot <- ggplot(data, aes(x = Apego.emocional.al.propio.país,
+                                 y = Apego.emocional.a.Europa)) +
+  geom_bin2d(bins = 20, aes(fill = after_stat(count))) +
+  scale_fill_distiller(palette = "Spectral") +
+  labs(x = "Apego emocional al propio país", y = "Apego emocional a Europa",
+       title = "Mapa de calor") +
+  theme_minimal()
+
+heatmap_plot <- heatmap_plot +
+  geom_line(data = df_prop_x, aes(x = Apego.emocional.al.propio.país,
+                                  y = prop), color = "black", linewidth = 1)
+heatmap_plot <- heatmap_plot +
+  geom_path(data = df_prop_y, aes(x = prop, y = Apego.emocional.a.Europa),
+            color = "black", linewidth = 1)
+
+print(heatmap_plot)
+```
+
+## 2. Estudiar y visualizar los efectos de la variable género en dicha correlación.
+
+| **Género** | **Media 'AEPP'** | **D.E. 'AEPP'** | **Media 'AEE'** | **D.E. 'AEE'** | **CORR. PEARSON** |
+|:----------:|:----------------:|:---------------:|:---------------:|:--------------:|:-----------------:|
+| Mujeres    | 7.837861         | 2.145087        | 6.270493        | 2.471481       | 0.4100358         |
+| Hombres    | 7.693225         | 2.210150        | 6.097755        | 2.525251       | 0.4146855         |
+| Tod@s      | 7.770864         | 2.176612        | 6.190264        | 2.498028       | 0.4128778         |
+
+## Slide with Plot
+
+```{r pressure}
+plot(pressure)
+```
+
