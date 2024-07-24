@@ -18,6 +18,13 @@
 \begin{document}
 \maketitle
 \SweaveOpts{concordance=TRUE}
+
+<<echo=FALSE,message=FALSE, warning=FALSE>>=
+library(knitr)
+library(tidyverse)
+opts_chunk$set(echo=FALSE, message=FALSE, warning=FALSE, fig.width=4.5, fig.height=3.5)
+@
+
 <<>>=
 if(!require(tinytex)){
   install.packages('tinytex')
@@ -53,7 +60,7 @@ Con tal de analizar los resultados proporcionados por el dashboard estudiaremos 
 
 \section{Estudiar y visualizar cómo correlacionan el apego emocional al propio país y el apego emocional a Europa en nuestra muestra.}
 
-<<echo=TRUE, fig=TRUE, fig.width=5, fig.height=5>>=
+<<echo=FALSE, fig=TRUE>>=
 library(ggplot2)
 library(dplyr)
 data <- read.csv('Base de datos depurada.csv')
@@ -88,7 +95,6 @@ heatmap_plot <- heatmap_plot +
 print(heatmap_plot)
 @
 
-\newpage
 \section{Estudiar y visualizar los efectos de la variable género en dicha correlación.}
  \begin{itemize}
  \item D.E. = Desviación estándard
@@ -108,7 +114,7 @@ print(heatmap_plot)
  \end{tabular}
  \end{table}
 
-<<echo=TRUE, fig=TRUE, fig.width=5, fig.height=5>>=
+<<echo=FALSE, fig=TRUE, fig.width=5, fig.height=5>>=
 library(ggplot2)
 library(dplyr)
 data <- read.csv('Base de datos depurada.csv')
@@ -144,7 +150,7 @@ heatmap_plot <- heatmap_plot +
 print(heatmap_plot)
 @
 
-<<echo=TRUE, fig=TRUE, fig.width=5, fig.height=5>>=
+<<echo=FALSE, fig=TRUE, fig.width=5, fig.height=5>>=
 library(ggplot2)
 library(dplyr)
 data <- read.csv('Base de datos depurada.csv')
@@ -180,6 +186,7 @@ heatmap_plot <- heatmap_plot +
 print(heatmap_plot)
 @
 
+\newpage
 \section{Estudiar y visualizar los efectos de la variable edad en dicha correlación.}
  \begin{itemize}
  \item D.E. = Desviación estándard
@@ -202,8 +209,7 @@ print(heatmap_plot)
  \end{tabular}
  \end{table}
  
-\newpage
-<<echo=TRUE, fig=TRUE, fig.width=5, fig.height=5>>=
+<<echo=FALSE, fig=TRUE, fig.width=5, fig.height=5>>=
 library(ggplot2)
 library(dplyr)
 data <- read.csv('Base de datos depurada.csv')
@@ -239,8 +245,7 @@ heatmap_plot <- heatmap_plot +
 print(heatmap_plot)
 @
 
-\newpage
-<<echo=TRUE, fig=TRUE, fig.width=5, fig.height=5>>=
+<<echo=FALSE, fig=TRUE, fig.width=5, fig.height=5>>=
 library(ggplot2)
 library(dplyr)
 data <- read.csv('Base de datos depurada.csv')
@@ -276,8 +281,7 @@ heatmap_plot <- heatmap_plot +
 print(heatmap_plot)
 @
 
-\newpage
-<<echo=TRUE, fig=TRUE, fig.width=5, fig.height=5>>=
+<<echo=FALSE, fig=TRUE, fig.width=5, fig.height=5>>=
 library(ggplot2)
 library(dplyr)
 data <- read.csv('Base de datos depurada.csv')
@@ -313,8 +317,7 @@ heatmap_plot <- heatmap_plot +
 print(heatmap_plot)
 @
 
-\newpage
-<<echo=TRUE, fig=TRUE, fig.width=5, fig.height=5>>=
+<<echo=FALSE, fig=TRUE, fig.width=5, fig.height=5>>=
 library(ggplot2)
 library(dplyr)
 data <- read.csv('Base de datos depurada.csv')
@@ -350,8 +353,7 @@ heatmap_plot <- heatmap_plot +
 print(heatmap_plot)
 @
 
-\newpage
-<<echo=TRUE, fig=TRUE, fig.width=5, fig.height=5>>=
+<<echo=FALSE, fig=TRUE, fig.width=5, fig.height=5>>=
 library(ggplot2)
 library(dplyr)
 data <- read.csv('Base de datos depurada.csv')
@@ -418,8 +420,7 @@ print(heatmap_plot)
  \end{tabular}
  \end{table}
 
-\newpage
-<<echo=TRUE, fig=TRUE, fig.width=5, fig.height=5>>=
+<<echo=FALSE, fig=TRUE, fig.width=5, fig.height=5>>=
 library(ggplot2)
 library(dplyr)
 data <- read.csv('Base de datos depurada.csv')
@@ -455,8 +456,7 @@ heatmap_plot <- heatmap_plot +
 print(heatmap_plot)
 @
 
-\newpage
-<<echo=TRUE, fig=TRUE, fig.width=5, fig.height=5>>=
+<<echo=FALSE, fig=TRUE, fig.width=5, fig.height=5>>=
 library(ggplot2)
 library(dplyr)
 data <- read.csv('Base de datos depurada.csv')
@@ -492,8 +492,7 @@ heatmap_plot <- heatmap_plot +
 print(heatmap_plot)
 @
 
-\newpage
-<<echo=TRUE, fig=TRUE, fig.width=5, fig.height=5>>=
+<<echo=FALSE, fig=TRUE, fig.width=5, fig.height=5>>=
 library(ggplot2)
 library(dplyr)
 data <- read.csv('Base de datos depurada.csv')
@@ -529,8 +528,7 @@ heatmap_plot <- heatmap_plot +
 print(heatmap_plot)
 @
 
-\newpage
-<<echo=TRUE, fig=TRUE, fig.width=5, fig.height=5>>=
+<<echo=FALSE, fig=TRUE, fig.width=5, fig.height=5>>=
 library(ggplot2)
 library(dplyr)
 data <- read.csv('Base de datos depurada.csv')
@@ -566,8 +564,7 @@ heatmap_plot <- heatmap_plot +
 print(heatmap_plot)
 @
 
-\newpage
-<<echo=TRUE, fig=TRUE, fig.width=5, fig.height=5>>=
+<<echo=FALSE, fig=TRUE, fig.width=5, fig.height=5>>=
 library(ggplot2)
 library(dplyr)
 data <- read.csv('Base de datos depurada.csv')
@@ -603,8 +600,7 @@ heatmap_plot <- heatmap_plot +
 print(heatmap_plot)
 @
 
-\newpage
-<<echo=TRUE, fig=TRUE, fig.width=5, fig.height=5>>=
+<<echo=FALSE, fig=TRUE, fig.width=5, fig.height=5>>=
 library(ggplot2)
 library(dplyr)
 data <- read.csv('Base de datos depurada.csv')
@@ -640,8 +636,7 @@ heatmap_plot <- heatmap_plot +
 print(heatmap_plot)
 @
 
-\newpage
-<<echo=TRUE, fig=TRUE, fig.width=5, fig.height=5>>=
+<<echo=FALSE, fig=TRUE, fig.width=5, fig.height=5>>=
 library(ggplot2)
 library(dplyr)
 data <- read.csv('Base de datos depurada.csv')
@@ -677,8 +672,7 @@ heatmap_plot <- heatmap_plot +
 print(heatmap_plot)
 @
 
-\newpage
-<<echo=TRUE, fig=TRUE, fig.width=5, fig.height=5>>=
+<<echo=FALSE, fig=TRUE, fig.width=5, fig.height=5>>=
 library(ggplot2)
 library(dplyr)
 data <- read.csv('Base de datos depurada.csv')
@@ -714,8 +708,7 @@ heatmap_plot <- heatmap_plot +
 print(heatmap_plot)
 @
 
-\newpage
-<<echo=TRUE, fig=TRUE, fig.width=5, fig.height=5>>=
+<<echo=FALSE, fig=TRUE, fig.width=5, fig.height=5>>=
 library(ggplot2)
 library(dplyr)
 data <- read.csv('Base de datos depurada.csv')
@@ -751,8 +744,7 @@ heatmap_plot <- heatmap_plot +
 print(heatmap_plot)
 @
 
-\newpage
-<<echo=TRUE, fig=TRUE, fig.width=5, fig.height=5>>=
+<<echo=FALSE, fig=TRUE, fig.width=5, fig.height=5>>=
 library(ggplot2)
 library(dplyr)
 data <- read.csv('Base de datos depurada.csv')
@@ -788,8 +780,7 @@ heatmap_plot <- heatmap_plot +
 print(heatmap_plot)
 @
 
-\newpage
-<<echo=TRUE, fig=TRUE, fig.width=5, fig.height=5>>=
+<<echo=FALSE, fig=TRUE, fig.width=5, fig.height=5>>=
 library(ggplot2)
 library(dplyr)
 data <- read.csv('Base de datos depurada.csv')
@@ -825,8 +816,7 @@ heatmap_plot <- heatmap_plot +
 print(heatmap_plot)
 @
 
-\newpage
-<<echo=TRUE, fig=TRUE, fig.width=5, fig.height=5>>=
+<<echo=FALSE, fig=TRUE, fig.width=5, fig.height=5>>=
 library(ggplot2)
 library(dplyr)
 data <- read.csv('Base de datos depurada.csv')
@@ -862,8 +852,7 @@ heatmap_plot <- heatmap_plot +
 print(heatmap_plot)
 @
 
-\newpage
-<<echo=TRUE, fig=TRUE, fig.width=5, fig.height=5>>=
+<<echo=FALSE, fig=TRUE, fig.width=5, fig.height=5>>=
 library(ggplot2)
 library(dplyr)
 data <- read.csv('Base de datos depurada.csv')
@@ -899,6 +888,7 @@ heatmap_plot <- heatmap_plot +
 print(heatmap_plot)
 @
 
+\newpage
 \section{Estudiar y visualizar cómo correlacionan el apego emocional al propio país y el apego emocional a Europa entre diferentes subgrupos a escoger de entre los diferentes niveles de nuestras variables demográficas.}
 
 \noindent El dashboard generado nos permite también visualizar todos los subconjuntos de muestras posibles de crear de entre todas las categorías de cada variable demográfica. Escogiendo una única categoría en cada variable demográfica podemos obtener un total de 130 submuestras diferentes.
@@ -924,6 +914,7 @@ print(heatmap_plot)
 
 \noindent El dashboard nos permite además escoger múltiples opciones de categorías de entre las variables demográficas. Esto resulta en una infinidad de opciones, el análisis de las cuales escapa los objetivos de este informe.
 
+\newpage
 \section*{Conclusiones}
 
 \noindent Los resultados obtenidos en este informe nos permiten concluir que no se observan diferencias entre mujeres y hombres en la correlación de las variables 'Apego emocional al propio país' y 'Apego emocional a Europa', además los valores obtenidos en la correlación de Pearson nos permiten afirmar que no hay diferencias significativas en dicha correlación entre los hombres y mujeres que conforman nuestra muestra.
@@ -935,7 +926,7 @@ print(heatmap_plot)
 \noindent Por lo que hace a la variable demográfica 'nacionalidad' podemos observar que sí que influye en como se relacionan la variable de apego emocional al propio país y a Europa. Se pueden observar tanto cambios en la intensidad en como se correlacionan, como en qué nivel de apego tanto al país como a Europa son los más correlacionados. Vemos que hay un claro parecido de gráficos entre los países más occidentales, los más orientales y los escandinavos. Además, cabe destacar que el Reino Unido radicaliza la tendencia de los países más occidentales. Los países más occidentales tienden a presentar mayor correlación entre los valores moderados/altos pero no extremamente altos de la variable apego al propio país y los valores también moderados/altos pero no extremamente de la variable apego a Europa. Los países más orientales tienden a presentar mayor correlación entre los valores extremamente altos de la variable apego al propio país y los valores también extremamente altos de la variable apego a Europa. Finalmente, los países escandinavos tienden a presentar mayor correlación entre los valores extremamente altos de la variable apego al propio país y valores moderados/altos de la variable apego a Europa.
 
 
-\noindent Los valores de la correlación de Pearson nos indican que el país con una correlación menor es Lituania (0.2824732) indicándonos que en este país el apego al propio país no predice tanto el apego a Europa (y a la inversa) como pasa en otros paísos. El país con una correlación mayor es Alemania (0.5506882) indicándonos que en este país el apego al propio país predice más el apego a Europa (y a la inversa) que en otros paísos.
+\noindent Los valores de la correlación de Pearson nos indican que el país con una correlación menor es Lituania (0.2824732) indicándonos que en este país el apego al propio país no predice tanto el apego a Europa (y a la inversa) como pasa en otros países. El país con una correlación mayor es Alemania (0.5506882) indicándonos que en este país el apego al propio país predice más el apego a Europa (y a la inversa) que en otros países.
 
 
 \noindent Por lo que hace a los gráficos obtenidos a partir de la submuestra con una correlación de Pearson menor y la submuestra con la correlación mayor podemos concluir que el rango de valores de las correlaciones obtenidas en cada subconjunto de variables es muy ámplio. Aún así futuros estudios podrían observar con mayor precisón como es la distribución de las correlaciones entre cada posible submuestra compuesta por una única categoría de cada variable demográfica e incluso de las compuestas por más de una categoría, así como estudiar su representatividad. La información referente a las distribuciones de las dos variables de apego emocional que encontramos representada con una línea negra encima de los mapas de calor podría también interesante de analizar.

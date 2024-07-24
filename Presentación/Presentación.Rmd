@@ -1,8 +1,14 @@
 ---
 title: "Presentación: APEGO EMOCIONAL AL PROPIO PAÍS Y A EUROPA"
 author: "Mariona Puente Quera"
-date: "2024-07-23"
+date: "`r format(Sys.Date(), '%d %b, %Y')`"
 output: beamer_presentation
+header-includes:
+  - \usepackage[spanish]{babel}
+  - \usepackage{float}
+  - \usepackage{xcolor}
+  - \definecolor{customlightcyan}{HTML}{E0FFFF}
+  - \setbeamercolor{background canvas}{bg=customlightcyan}
 ---
 
 ```{r setup, include=FALSE}
@@ -10,16 +16,25 @@ knitr::opts_chunk$set(echo = FALSE)
 ```
 
 ## ÍNDICE
-1. Objetivos
-2. Resultados
-Estudiar y visualizar cómo correlacionan el apego emocional al propio país y el apego emocional a Europa en nuestra muestra.
-...
+- Objetivos
+- Resultados
+1. Estudiar y visualizar cómo correlacionan el apego emocional al propio país y el apego emocional a Europa.      
+  Conclusiones
+2. Estudiar y visualizar los efectos de la variable género.
+  Conclusiones
+3. Estudiar y visualizar los efectos de la variable edad.
+  Conclusiones
+4. Estudiar y visualizar los efectos de la variable nacionalidad.
+  Conclusiones
+5. Estudiar y visualizar cómo correlacionan subgrupos a escoger de entre los diferentes niveles de las variables demográficas.
+  Conclusiones
+- Preguntas y debate
 
 ## OBJETIVOS
 
-OBJETIVO GENERAL: Estudiar cómo correlacionan el apego emocional al propio país y el apego
+- OBJETIVO GENERAL: Estudiar cómo correlacionan el apego emocional al propio país y el apego
 emocional a Europa, y el efecto del género, de la edad y de la nacionalidad en dicha correlación.
-OBJETIVOS ESPECÍFICOS:
+- OBJETIVOS ESPECÍFICOS:
 1. Estudiar y visualizar cómo correlacionan el apego emocional al propio país y el apego emocional a
 Europa en nuestra muestra.
 2. Estudiar y visualizar los efectos de la variable género en dicha correlación.
@@ -29,35 +44,40 @@ Europa en nuestra muestra.
 a Europa entre diferentes subgrupos a escoger de entre los diferentes niveles de nuestras variables
 demográficas.
 
-## RESULTADOS
+##
+\begin{center}
+  \Huge{RESULTADOS}
+\end{center}
+
 Con tal de analizar los resultados proporcionados por el dashboard estudiaremos cada objetivo específico por separado a continuación:
 
-## 1. Estudiar y visualizar cómo correlacionan el apego emocional al propio país y el apego emocional a Europa en nuestra muestra.
+## 1. Estudiar y visualizar cómo correlacionan el apego emocional al propio país y el apego emocional a Europa.
 
-```{r, echo = FALSE}
+```{r, echo = FALSE, fig=TRUE, fig.width=3.75, fig.height=2.75, message=FALSE, warning=FALSE}
 library(ggplot2)
 library(dplyr)
 data <- read.csv('Base de datos depurada.csv')
+
 df_prop_x <- data %>%
   filter(!is.na(Apego.emocional.al.propio.país)) %>%
   group_by(Apego.emocional.al.propio.país) %>%
   summarise(count = n()) %>%
   mutate(prop = (count / sum(count)) * 20)
-
+  
 df_prop_y <- data %>%
   filter(!is.na(Apego.emocional.a.Europa)) %>%
   group_by(Apego.emocional.a.Europa) %>%
   summarise(count = n()) %>%
   mutate(prop = (count / sum(count)) * 20)
-
+  
 heatmap_plot <- ggplot(data, aes(x = Apego.emocional.al.propio.país,
                                  y = Apego.emocional.a.Europa)) +
-  geom_bin2d(bins = 20, aes(fill = after_stat(count))) +
+  geom_bin2d(bins = 20, aes(fill = ..count..)) +
   scale_fill_distiller(palette = "Spectral") +
   labs(x = "Apego emocional al propio país", y = "Apego emocional a Europa",
        title = "Mapa de calor") +
   theme_minimal()
-
+  
 heatmap_plot <- heatmap_plot +
   geom_line(data = df_prop_x, aes(x = Apego.emocional.al.propio.país,
                                   y = prop), color = "black", linewidth = 1)
@@ -68,17 +88,391 @@ heatmap_plot <- heatmap_plot +
 print(heatmap_plot)
 ```
 
-## 2. Estudiar y visualizar los efectos de la variable género en dicha correlación.
+## Conclusiones
 
-| **Género** | **Media 'AEPP'** | **D.E. 'AEPP'** | **Media 'AEE'** | **D.E. 'AEE'** | **CORR. PEARSON** |
-|:----------:|:----------------:|:---------------:|:---------------:|:--------------:|:-----------------:|
-| Mujeres    | 7.837861         | 2.145087        | 6.270493        | 2.471481       | 0.4100358         |
-| Hombres    | 7.693225         | 2.210150        | 6.097755        | 2.525251       | 0.4146855         |
-| Tod@s      | 7.770864         | 2.176612        | 6.190264        | 2.498028       | 0.4128778         |
+- Los colores más intensos que vemos en el mapa de calor (rojo y amarillo) indican áreas con una mayor cantidad de respuestas, mientras que los colores más suaves (verde y azul) indican menos respuestas.
+- Observamos una correlación, puesto que los colores del gráfico no son homogéneos.
+- Dicha distribución de colores nos sugiere que a medida que el apego emocional al propio país aumenta, también tiende a aumentar el apego emocional a Europa.
+- La línea negra que recorre el gráfico nos indica la distribución en cada una de las dos variables de apego.
+- Dicha línea muestra una tendencia ascendente tanto para la variable de apego emocional al propio país como a Europa, indicando que muchas personas tienen un apego emocional moderado/alto tanto a su propio país como a Europa.
 
-## Slide with Plot
+## 2. Estudiar y visualizar los efectos de la variable género.
 
-```{r pressure}
-plot(pressure)
+\begin{table}[ht]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{l | c c c c c}
+\hline
+\bf{Género} & \bf{Media 'AEPP'} & \bf{D.E. 'AEPP'} & \bf{Media 'AEE'} & \bf{D.E. 'AEE'} & \bf{CORR. PEARSON} \\
+\hline
+Mujeres & 7.837861 & 2.145087 & 6.270493 & 2.471481 & 0.4100358 \\
+Hombres & 7.693225 & 2.21015 & 6.097755 & 2.525251 & 0.4146855 \\
+Tod@s & 7.770864 & 2.176612 & 6.190264 & 2.498028 & 0.4128778 \\
+\hline
+\end{tabular}%
+}
+\caption{Variable género}
+\end{table}
+
+```{r, echo = FALSE, fig=TRUE, fig.width=6, fig.height=2, message=FALSE, warning=FALSE}
+library(ggplot2)
+library(dplyr)
+library(gridExtra)
+
+data <- read.csv('Base de datos depurada.csv')
+
+data_mujer <- subset(data, Género == 'Mujer')
+
+df_prop_x <- data_mujer %>%
+  filter(!is.na(Apego.emocional.al.propio.país)) %>%
+  group_by(Apego.emocional.al.propio.país) %>%
+  summarise(count = n()) %>%
+  mutate(prop = (count / sum(count)) * 20)
+  
+df_prop_y <- data_mujer %>%
+  filter(!is.na(Apego.emocional.a.Europa)) %>%
+  group_by(Apego.emocional.a.Europa) %>%
+  summarise(count = n()) %>%
+  mutate(prop = (count / sum(count)) * 20)
+  
+heatmap_plot_mujer <- ggplot(data_mujer, aes(x = Apego.emocional.al.propio.país,
+                                 y = Apego.emocional.a.Europa)) +
+  geom_bin2d(bins = 20, aes(fill = ..count..)) +
+  scale_fill_distiller(palette = "Spectral") +
+  labs(x = "Apego emocional al propio país", y = "Apego emocional a Europa",
+       title = "Mujeres") +
+  theme_minimal()
+  
+heatmap_plot_mujer <- heatmap_plot_mujer +
+  geom_line(data = df_prop_x, aes(x = Apego.emocional.al.propio.país,
+                                  y = prop), color = "black", size = 1)
+heatmap_plot_mujer <- heatmap_plot_mujer +
+  geom_path(data = df_prop_y, aes(x = prop, y = Apego.emocional.a.Europa),
+            color = "black", size = 1)
+
+data_hombre <- subset(data, Género == 'Hombre')
+
+df_prop_x <- data_hombre %>%
+  filter(!is.na(Apego.emocional.al.propio.país)) %>%
+  group_by(Apego.emocional.al.propio.país) %>%
+  summarise(count = n()) %>%
+  mutate(prop = (count / sum(count)) * 20)
+  
+df_prop_y <- data_hombre %>%
+  filter(!is.na(Apego.emocional.a.Europa)) %>%
+  group_by(Apego.emocional.a.Europa) %>%
+  summarise(count = n()) %>%
+  mutate(prop = (count / sum(count)) * 20)
+  
+heatmap_plot_hombre <- ggplot(data_hombre, aes(x = Apego.emocional.al.propio.país,
+                                 y = Apego.emocional.a.Europa)) +
+  geom_bin2d(bins = 20, aes(fill = ..count..)) +
+  scale_fill_distiller(palette = "Spectral") +
+  labs(x = "Apego emocional al propio país", y = "Apego emocional a Europa",
+       title = "Hombres") +
+  theme_minimal()
+  
+heatmap_plot_hombre <- heatmap_plot_hombre +
+  geom_line(data = df_prop_x, aes(x = Apego.emocional.al.propio.país,
+                                  y = prop), color = "black", size = 1)
+heatmap_plot_hombre <- heatmap_plot_hombre +
+  geom_path(data = df_prop_y, aes(x = prop, y = Apego.emocional.a.Europa),
+            color = "black", size = 1)
+
+grid.arrange(heatmap_plot_mujer, heatmap_plot_hombre, ncol = 2)
 ```
 
+## Conclusiones
+
+- Los resultados gráficos obtenidos nos permiten concluir que no se observan diferencias entre mujeres y hombres en la correlación de las variables 'Apego emocional al propio país' y 'Apego emocional a Europa'.
+
+- Los valores obtenidos en la correlación de Pearson nos permiten afirmar que no hay diferencias significativas en dicha correlación entre los hombres y mujeres que conforman nuestra muestra.
+
+## 3. Estudiar y visualizar los efectos de la variable edad.
+
+\begin{table}[ht]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{l | c c c c c}
+\hline
+\bf{Rango edad} & \bf{Media 'AEPP'} & \bf{D.E. 'AEPP'} & \bf{Media 'AEE'} & \bf{D.E. 'AEE'} & \bf{CORR. PEARSON} \\
+\hline
+Menores de 30 & 6.926075 & 2.360681 & 6.121974 & 2.354955 & 0.4800369 \\
+Entre 30 y 44 & 7.462656 & 2.19397 & 6.107612 & 2.466652 & 0.4444008 \\
+Entre 45 y 59 & 7.806323 & 2.102556 & 6.191416 & 2.490652 & 0.395468 \\
+Entre 60 y 74 & 8.161118 & 2.020955 & 6.27193 & 2.535688 & 0.3987813 \\
+75 o mayores & 8.466388 & 1.950735 & 6.222835 & 2.643745 & 0.3832552 \\
+Tod@s & 7.770864 & 2.176612 & 6.190264 & 2.498028 & 0.4128778 \\
+\hline
+\end{tabular}%
+}
+\caption{Variable edad}
+\end{table}
+
+##
+
+```{r, echo=FALSE, fig.width=7, fig.height=5, message=FALSE, warning=FALSE}
+data <- read.csv('Base de datos depurada.csv')
+
+create_plot <- function(data_subset, title) {
+  df_prop_x <- data_subset %>%
+    filter(!is.na(Apego.emocional.al.propio.país)) %>%
+    group_by(Apego.emocional.al.propio.país) %>%
+    summarise(count = n()) %>%
+    mutate(prop = (count / sum(count)) * 20)
+    
+  df_prop_y <- data_subset %>%
+    filter(!is.na(Apego.emocional.a.Europa)) %>%
+    group_by(Apego.emocional.a.Europa) %>%
+    summarise(count = n()) %>%
+    mutate(prop = (count / sum(count)) * 20)
+  
+  ggplot(data_subset, aes(x = Apego.emocional.al.propio.país,
+                          y = Apego.emocional.a.Europa)) +
+    geom_bin2d(bins = 20, aes(fill = ..count..)) +
+    scale_fill_distiller(palette = "Spectral") +
+    labs(x = "Apego emocional propio país", y = "Apego emocional a Europa",
+         title = title) +
+    theme_minimal() +
+    geom_line(data = df_prop_x, aes(x = Apego.emocional.al.propio.país,
+                                    y = prop), color = "black", size = 1) +
+    geom_path(data = df_prop_y, aes(x = prop, y = Apego.emocional.a.Europa),
+              color = "black", size = 1) +
+    theme(legend.position = "none")
+}
+
+plot_30 <- create_plot(subset(data, Rango.de.edad == 'menor de 30'), "Menores de 30")
+plot_3044 <- create_plot(subset(data, Rango.de.edad == 'entre 30 y 44'), "Entre 30 y 44")
+plot_4559 <- create_plot(subset(data, Rango.de.edad == 'entre 45 y 59'), "Entre 45 y 59")
+plot_6074 <- create_plot(subset(data, Rango.de.edad == 'entre 60 y 74'), "Entre 60 y 74")
+plot_75 <- create_plot(subset(data, Rango.de.edad == '75 o mayor'), "75 o mayores")
+
+grid.arrange(plot_30, plot_3044, plot_4559, plot_6074, plot_75, 
+             ncol = 3, nrow = 2, 
+             heights = c(1, 1), widths = c(1, 1, 1))
+```
+
+## Conclusiones
+
+- La variable demográfica 'edad' sí que influye en como se relacionan la variable de apego emocional al propio país y a Europa.
+- Observamos cambios en qué nivel de apego tanto al país como a Europa son los más correlacionados.
+- A medida que aumenta la edad, dicho nivel de correlación del apego entre el país y Europa se mueve desde valores moderados hasta los valores más elevados de apego.
+- Los valores de la correlación que observamos en la tabla nos permiten ver que el rango de edad (o la generación) que obtiene una correlación menor es el rango de '75 o mayores' (0.3832552) y el rango que obtiene una correlación mayor es el rango de los más jóvenes 'menores de 30' (0.4800369).
+- A medida que aumenta la edad aumenta la correlación, con un estancamiento entre los 45 y los 70 años aproximadamente.
+
+## 4. Estudiar y visualizar los efectos de la variable nacionalidad.
+
+\begin{table}[ht]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{l | c c c c c}
+\hline
+\bf{País} & \bf{Media 'AEPP'} & \bf{D.E. 'AEPP'} & \bf{Media 'AEE'} & \bf{D.E. 'AEE'} & \bf{CORR. PEARSON} \\
+\hline
+Alemania & 7.212096 & 2.234437 & 6.486509 & 2.356144 & 0.5506882 \\
+Áustria & 8.36 & 1.829636 & 6.524541 & 2.3696 & 0.2826011 \\
+Croacia & 7.798714 & 2.247549 & 5.990909 & 2.59227 & 0.4341063 \\
+Eslovaquia & 7.570231 & 2.426643 & 5.966878 & 2.792222 & 0.4622578 \\
+Eslovenia & 7.753017 & 2.212389 & 5.930138 & 2.597684 & 0.458533 \\
+Finlandia & 8.630198 & 1.56143 & 6.838132 & 1.964155 & 0.3117515 \\
+Hungría & 8.167143 & 2.017117 & 7.1415 & 2.386804 & 0.4656425 \\
+Irlanda & 7.968688 & 1.918663 & 5.943641 & 2.399126 & 0.3305107 \\
+Lituania & 7.807777 & 2.296271 & 5.890895 & 2.731617 & 0.2824732 \\
+Noruega & 8.405101 & 1.668298 & 6.596847 & 2.154182 & 0.3667099 \\
+Países Bajos & 6.894737 & 2.092995 & 5.722584 & 2.187825 & 0.4928814 \\
+Reino Unido & 6.575758 & 2.731243 & 4.795679 & 2.788772 & 0.2884089 \\
+Suiza & 7.926705 & 1.826457 & 6.066909 & 2.297686 & 0.297761 \\
+Tod@s & 7.770864 & 2.176612 & 6.190264 & 2.498028 & 0.4128778 \\
+\hline
+\end{tabular}%
+}
+\caption{Variable país}
+\end{table}
+
+## Países más occidentales
+
+```{r, echo=FALSE, fig.width=7, fig.height=5, message=FALSE, warning=FALSE}
+data <- read.csv('Base de datos depurada.csv')
+
+create_plot <- function(data_subset, title) {
+  df_prop_x <- data_subset %>%
+    filter(!is.na(Apego.emocional.al.propio.país)) %>%
+    group_by(Apego.emocional.al.propio.país) %>%
+    summarise(count = n()) %>%
+    mutate(prop = (count / sum(count)) * 20)
+    
+  df_prop_y <- data_subset %>%
+    filter(!is.na(Apego.emocional.a.Europa)) %>%
+    group_by(Apego.emocional.a.Europa) %>%
+    summarise(count = n()) %>%
+    mutate(prop = (count / sum(count)) * 20)
+  
+  ggplot(data_subset, aes(x = Apego.emocional.al.propio.país,
+                          y = Apego.emocional.a.Europa)) +
+    geom_bin2d(bins = 20, aes(fill = ..count..)) +
+    scale_fill_distiller(palette = "Spectral") +
+    labs(x = "Apego emocional propio país", y = "Apego emocional a Europa",
+         title = title) +
+    theme_minimal() +
+    geom_line(data = df_prop_x, aes(x = Apego.emocional.al.propio.país,
+                                    y = prop), color = "black", size = 1) +
+    geom_path(data = df_prop_y, aes(x = prop, y = Apego.emocional.a.Europa),
+              color = "black", size = 1) +
+    theme(legend.position = "none")
+}
+
+plot_alemania <- create_plot(subset(data, País == 'Alemania'), "Alemania")
+plot_irlanda <- create_plot(subset(data, País == 'Irlanda'), "Irlanda")
+plot_paisesbajos <- create_plot(subset(data, País == 'Países Bajos'), "Países Bajos")
+plot_reinounido <- create_plot(subset(data, País == 'Reino Unido'), "Reino Unido")
+plot_suiza <- create_plot(subset(data, País == 'Suiza'), "Suiza")
+
+grid.arrange(plot_alemania, plot_irlanda, plot_paisesbajos, plot_reinounido, plot_suiza, 
+             ncol = 3, nrow = 2, 
+             heights = c(1, 1), widths = c(1, 1, 1))
+```
+
+## Países más orientales
+
+```{r, echo=FALSE, fig.width=7, fig.height=5, message=FALSE, warning=FALSE}
+data <- read.csv('Base de datos depurada.csv')
+
+create_plot <- function(data_subset, title) {
+  df_prop_x <- data_subset %>%
+    filter(!is.na(Apego.emocional.al.propio.país)) %>%
+    group_by(Apego.emocional.al.propio.país) %>%
+    summarise(count = n()) %>%
+    mutate(prop = (count / sum(count)) * 20)
+    
+  df_prop_y <- data_subset %>%
+    filter(!is.na(Apego.emocional.a.Europa)) %>%
+    group_by(Apego.emocional.a.Europa) %>%
+    summarise(count = n()) %>%
+    mutate(prop = (count / sum(count)) * 20)
+  
+  ggplot(data_subset, aes(x = Apego.emocional.al.propio.país,
+                          y = Apego.emocional.a.Europa)) +
+    geom_bin2d(bins = 20, aes(fill = ..count..)) +
+    scale_fill_distiller(palette = "Spectral") +
+    labs(x = "Apego emocional propio país", y = "Apego emocional a Europa",
+         title = title) +
+    theme_minimal() +
+    geom_line(data = df_prop_x, aes(x = Apego.emocional.al.propio.país,
+                                    y = prop), color = "black", size = 1) +
+    geom_path(data = df_prop_y, aes(x = prop, y = Apego.emocional.a.Europa),
+              color = "black", size = 1) +
+    theme(legend.position = "none")
+}
+
+plot_austria <- create_plot(subset(data, País == 'Áustria'), "Áustria")
+plot_croacia <- create_plot(subset(data, País == 'Croacia'), "Croacia")
+plot_eslovaquia <- create_plot(subset(data, País == 'Eslovaquia'), "Eslovaquia")
+plot_eslovenia <- create_plot(subset(data, País == 'Eslovenia'), "Eslovenia")
+plot_hungria <- create_plot(subset(data, País == 'Hungría'), "Hungría")
+plot_lituania <- create_plot(subset(data, País == 'Lituania'), "Lituania")
+
+grid.arrange(plot_austria, plot_croacia, plot_eslovaquia, plot_eslovenia, plot_hungria, plot_lituania,
+             ncol = 3, nrow = 2, 
+             heights = c(1, 1), widths = c(1, 1, 1))
+```
+
+## Países escandinavos
+
+```{r, echo=FALSE, fig.width=4, fig.height=2, message=FALSE, warning=FALSE}
+data <- read.csv('Base de datos depurada.csv')
+
+create_plot <- function(data_subset, title) {
+  df_prop_x <- data_subset %>%
+    filter(!is.na(Apego.emocional.al.propio.país)) %>%
+    group_by(Apego.emocional.al.propio.país) %>%
+    summarise(count = n()) %>%
+    mutate(prop = (count / sum(count)) * 20)
+    
+  df_prop_y <- data_subset %>%
+    filter(!is.na(Apego.emocional.a.Europa)) %>%
+    group_by(Apego.emocional.a.Europa) %>%
+    summarise(count = n()) %>%
+    mutate(prop = (count / sum(count)) * 20)
+  
+  ggplot(data_subset, aes(x = Apego.emocional.al.propio.país,
+                          y = Apego.emocional.a.Europa)) +
+    geom_bin2d(bins = 20, aes(fill = ..count..)) +
+    scale_fill_distiller(palette = "Spectral") +
+    labs(x = "Apego al propio país", y = "Apego emocional a Europa",
+         title = title) +
+    theme_minimal() +
+    geom_line(data = df_prop_x, aes(x = Apego.emocional.al.propio.país,
+                                    y = prop), color = "black", size = 1) +
+    geom_path(data = df_prop_y, aes(x = prop, y = Apego.emocional.a.Europa),
+              color = "black", size = 1) +
+    theme(legend.position = "none")
+}
+
+plot_finlandia <- create_plot(subset(data, País == 'Finlandia'), "Finlandia")
+plot_noruega <- create_plot(subset(data, País == 'Noruega'), "Noruega")
+
+grid.arrange(plot_finlandia, plot_noruega, ncol = 2)
+```
+
+## Conclusiones
+
+- La variable demográfica 'nacionalidad' también influye en como se relacionan la variable de apego emocional al propio país y a Europa.
+- Observamos cambios tanto en la intensidad en como se correlacionan, como en qué nivel de apego tanto al país como a Europa son los más correlacionados.
+- Los valores de la correlación de Pearson nos indican que el país con una correlación menor es Lituania (0.2824732) indicándonos que en este país el apego al propio país no predice tanto el apego a Europa (y a la inversa) como pasa en otros países.
+- El país con una correlación mayor es Alemania (0.5506882) indicándonos que en este país el apego al propio país predice más el apego a Europa (y a la inversa) que en otros países.
+
+##
+
+- Hay un claro parecido de gráficos entre los países más occidentales, los más orientales y los escandinavos. Además, cabe destacar que el Reino Unido radicaliza la tendencia de los países más occidentales.
+  - Los países más occidentales tienden a presentar mayor correlación entre los valores moderados/altos pero no extremamente altos de la variable apego al propio país y los valores también moderados/altos pero no extremamente de la variable apego a Europa.
+  - Los países más orientales tienden a presentar mayor correlación entre los valores extremamente altos de la variable apego al propio país y los valores también extremamente altos de la variable apego a Europa.
+  - Los países escandinavos tienden a presentar mayor correlación entre los valores extremamente altos de la variable apego al propio país y valores moderados/altos de la variable apego a Europa.
+  
+## 5. Estudiar y visualizar cómo correlacionan subgrupos a escoger de entre los diferentes niveles de las variables demográficas.
+
+- El dashboard generado nos permite también visualizar todos los subconjuntos de muestras posibles de crear de entre todas las categorías de cada variable demográfica.
+- Escogiendo una única categoría en cada variable demográfica podemos obtener un total de 130 submuestras diferentes.
+- Seguidamente mostramos la submuestra que presenta una correlación de Pearson mayor y la que presenta una correlación menor.
+
+## Gráficos extremos
+
+\begin{figure}[H]
+\centering
+\begin{minipage}{0.50\textwidth}
+  \centering
+  \includegraphics[width=\textwidth]{Imatge1.png}
+  \caption{Correlación mayor - 0.75}
+  \label{fig:image1}
+\end{minipage}\hfill
+\begin{minipage}{0.50\textwidth}
+  \centering
+  \includegraphics[width=\textwidth]{Imatge2.png}
+  \caption{Correlación menor - 0.08}
+  \label{fig:image2}
+\end{minipage}
+\end{figure}
+
+\begin{columns}
+  \begin{column}{0.5\textwidth}
+    Hombres \\
+    75 años o mayores \\
+    Lituania
+  \end{column}
+  \begin{column}{0.5\textwidth}
+    Mujeres \\
+    75 años o mayores \\
+    Noruega
+  \end{column}
+\end{columns}
+
+## Conclusiones
+
+- Se trata de dos muestras muy pequeñas comparadas con el total de observaciones de las que disponemos en la muestra total, y no son representativas.
+- El rango de valores de las correlaciones obtenidas en cada subconjunto de variables es muy ámplio.
+- El dashboard nos permite además escoger múltiples opciones de categorías de entre las variables demográficas. Esto resulta en una infinidad de opciones, el análisis de las cuales escapa los objetivos de este informe.
+- Futuros estudios podrían observar con mayor precisón como es la distribución de las correlaciones entre cada posible submuestra compuesta por una única categoría de cada variable demográfica e incluso de las compuestas por más de una categoría, así como estudiar su representatividad.
+
+##
+\begin{center}
+  \Huge{PREGUNTAS Y DEBATE}
+\end{center}

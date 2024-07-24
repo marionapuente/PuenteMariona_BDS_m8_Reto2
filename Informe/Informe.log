@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.7.23)  23 JUL 2024 23:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.7.24)  24 JUL 2024 16:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**Código_informe.tex
-(./Código_informe.tex
+**Informe.tex
+(./Informe.tex
 LaTeX2e <2024-06-01> patch level 2
 L3 programming layer <2024-05-27>
 (c:/Users/mario/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/article.cls
@@ -113,22 +113,12 @@ LaTeX Info: Redefining \] on input line 2954.
 Package: babel 2024/06/26 v24.7 The Babel package
 \babel@savecnt=\count298
 \U@D=\dimen151
-\l@unhyphenated=\language5
+\l@unhyphenated=\language6
  (c:/Users/mario/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/babel/txtbabel.def)
 \bbl@readstream=\read2
 \bbl@dirlevel=\count299
  (c:/Users/mario/AppData/Roaming/TinyTeX/texmf-dist/tex/generic/babel-spanish/spanish.ldf
 Language: spanish.ldf 2021/05/27 v5.0q Spanish support from the babel system
-
-
-Package babel Warning: No hyphenation patterns were preloaded for
-(babel)                the language 'Spanish' into the format.
-(babel)                Please, configure your TeX system to add them and
-(babel)                rebuild the format. Now I will use the patterns
-(babel)                preloaded for \language=0 instead on input line 51.
-
-Package babel Info: Hyphen rules for 'spanish' set to \l@english
-(babel)             (\language0). Reported on input line 52.
 \es@quottoks=\toks22
 \es@quotdepth=\count300
 Package babel Info: Making " an active character on input line 570.
@@ -204,11 +194,11 @@ Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
 File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count308
 \l__pdf_internal_box=\box57
-) (./Código_informe.aux
+) (./Informe.aux
 LaTeX Info: Redefining \. on input line 8.
 LaTeX Info: Redefining \% on input line 8.
 )
-\openout1 = `Código_informe.aux'.
+\openout1 = `Informe.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
 LaTeX Font Info:    ... okay on input line 19.
@@ -287,218 +277,210 @@ Package grfext Info: Graphics extension search list:
 (grfext)             \AppendGraphicsExtensions on input line 504.
  (c:/Users/mario/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
-)) (./Código_informe-concordance.tex)
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 23.
+)) (./Informe-concordance.tex)
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 25.
  (c:/Users/mario/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
-LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 25.
+LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 27.
  (c:/Users/mario/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/ts1cmtt.fd
 File: ts1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
+<Informe-004.pdf, id=2, 433.62pt x 433.62pt>
+File: Informe-004.pdf Graphic file (type pdf)
+<use Informe-004.pdf>
+Package pdftex.def Info: Informe-004.pdf  used on input line 63.
+(pdftex.def)             Requested size: 386.95894pt x 386.97923pt.
+
 
 [1
 
 {c:/Users/mario/AppData/Roaming/TinyTeX/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-<Código_informe-003.pdf, id=14, 433.62pt x 433.62pt>
-File: Código_informe-003.pdf Graphic file (type pdf)
-<use Código_informe-003.pdf>
-Package pdftex.def Info: Código_informe-003.pdf  used on input line 92.
+<Informe-005.pdf, id=15, 433.62pt x 433.62pt>
+File: Informe-005.pdf Graphic file (type pdf)
+<use Informe-005.pdf>
+Package pdftex.def Info: Informe-005.pdf  used on input line 84.
 (pdftex.def)             Requested size: 386.95894pt x 386.97923pt.
 
 
-[2 <./Código_informe-003.pdf>]
-<Código_informe-004.pdf, id=24, 433.62pt x 433.62pt>
-File: Código_informe-004.pdf Graphic file (type pdf)
-<use Código_informe-004.pdf>
-Package pdftex.def Info: Código_informe-004.pdf  used on input line 146.
+[2 <./Informe-004.pdf>]
+<Informe-006.pdf, id=25, 433.62pt x 433.62pt>
+File: Informe-006.pdf Graphic file (type pdf)
+<use Informe-006.pdf>
+Package pdftex.def Info: Informe-006.pdf  used on input line 86.
 (pdftex.def)             Requested size: 386.95894pt x 386.97923pt.
 
 
-[3]
-<Código_informe-005.pdf, id=28, 433.62pt x 433.62pt>
-File: Código_informe-005.pdf Graphic file (type pdf)
-<use Código_informe-005.pdf>
-Package pdftex.def Info: Código_informe-005.pdf  used on input line 180.
-(pdftex.def)             Requested size: 386.95894pt x 386.97923pt.
+[3 <./Informe-005.pdf>]
 
-
-[4 <./Código_informe-004.pdf>]
-Overfull \hbox (10.01971pt too wide) in paragraph at lines 190--202
+[4 <./Informe-006.pdf>]
+Overfull \hbox (10.01971pt too wide) in paragraph at lines 97--109
 [][] 
  []
 
-
-
-[5 <./Código_informe-005.pdf>]
-<Código_informe-006.pdf, id=47, 433.62pt x 433.62pt>
-File: Código_informe-006.pdf Graphic file (type pdf)
-<use Código_informe-006.pdf>
-Package pdftex.def Info: Código_informe-006.pdf  used on input line 237.
+<Informe-007.pdf, id=44, 433.62pt x 433.62pt>
+File: Informe-007.pdf Graphic file (type pdf)
+<use Informe-007.pdf>
+Package pdftex.def Info: Informe-007.pdf  used on input line 111.
+(pdftex.def)             Requested size: 386.95894pt x 386.97923pt.
+<Informe-008.pdf, id=45, 433.62pt x 433.62pt>
+File: Informe-008.pdf Graphic file (type pdf)
+<use Informe-008.pdf>
+Package pdftex.def Info: Informe-008.pdf  used on input line 113.
 (pdftex.def)             Requested size: 386.95894pt x 386.97923pt.
 
 
-[6 <./Código_informe-006.pdf>]
-<Código_informe-007.pdf, id=57, 433.62pt x 433.62pt>
-File: Código_informe-007.pdf Graphic file (type pdf)
-<use Código_informe-007.pdf>
-Package pdftex.def Info: Código_informe-007.pdf  used on input line 272.
+[5 <./Informe-007.pdf>]
+<Informe-009.pdf, id=55, 433.62pt x 433.62pt>
+File: Informe-009.pdf Graphic file (type pdf)
+<use Informe-009.pdf>
+Package pdftex.def Info: Informe-009.pdf  used on input line 115.
 (pdftex.def)             Requested size: 386.95894pt x 386.97923pt.
 
 
-[7 <./Código_informe-007.pdf>]
-<Código_informe-008.pdf, id=68, 433.62pt x 433.62pt>
-File: Código_informe-008.pdf Graphic file (type pdf)
-<use Código_informe-008.pdf>
-Package pdftex.def Info: Código_informe-008.pdf  used on input line 307.
+[6 <./Informe-008.pdf>]
+<Informe-010.pdf, id=65, 433.62pt x 433.62pt>
+File: Informe-010.pdf Graphic file (type pdf)
+<use Informe-010.pdf>
+Package pdftex.def Info: Informe-010.pdf  used on input line 117.
 (pdftex.def)             Requested size: 386.95894pt x 386.97923pt.
 
 
-[8 <./Código_informe-008.pdf>]
-<Código_informe-009.pdf, id=78, 433.62pt x 433.62pt>
-File: Código_informe-009.pdf Graphic file (type pdf)
-<use Código_informe-009.pdf>
-Package pdftex.def Info: Código_informe-009.pdf  used on input line 342.
+[7 <./Informe-009.pdf>]
+<Informe-011.pdf, id=76, 433.62pt x 433.62pt>
+File: Informe-011.pdf Graphic file (type pdf)
+<use Informe-011.pdf>
+Package pdftex.def Info: Informe-011.pdf  used on input line 119.
 (pdftex.def)             Requested size: 386.95894pt x 386.97923pt.
 
 
-[9 <./Código_informe-009.pdf>]
-<Código_informe-010.pdf, id=88, 433.62pt x 433.62pt>
-File: Código_informe-010.pdf Graphic file (type pdf)
-<use Código_informe-010.pdf>
-Package pdftex.def Info: Código_informe-010.pdf  used on input line 377.
-(pdftex.def)             Requested size: 386.95894pt x 386.97923pt.
+[8 <./Informe-010.pdf>]
 
-
-[10 <./Código_informe-010.pdf>]
-Overfull \hbox (1.74396pt too wide) in paragraph at lines 388--408
+[9 <./Informe-011.pdf>]
+Overfull \hbox (1.74396pt too wide) in paragraph at lines 130--150
 [][] 
  []
 
-
-
-[11]
-<Código_informe-011.pdf, id=101, 433.62pt x 433.62pt>
-File: Código_informe-011.pdf Graphic file (type pdf)
-<use Código_informe-011.pdf>
-Package pdftex.def Info: Código_informe-011.pdf  used on input line 443.
+<Informe-012.pdf, id=95, 433.62pt x 433.62pt>
+File: Informe-012.pdf Graphic file (type pdf)
+<use Informe-012.pdf>
+Package pdftex.def Info: Informe-012.pdf  used on input line 152.
+(pdftex.def)             Requested size: 386.95894pt x 386.97923pt.
+<Informe-013.pdf, id=96, 433.62pt x 433.62pt>
+File: Informe-013.pdf Graphic file (type pdf)
+<use Informe-013.pdf>
+Package pdftex.def Info: Informe-013.pdf  used on input line 154.
 (pdftex.def)             Requested size: 386.95894pt x 386.97923pt.
 
 
-[12 <./Código_informe-011.pdf>]
-<Código_informe-012.pdf, id=111, 433.62pt x 433.62pt>
-File: Código_informe-012.pdf Graphic file (type pdf)
-<use Código_informe-012.pdf>
-Package pdftex.def Info: Código_informe-012.pdf  used on input line 478.
+[10 <./Informe-012.pdf>]
+<Informe-014.pdf, id=106, 433.62pt x 433.62pt>
+File: Informe-014.pdf Graphic file (type pdf)
+<use Informe-014.pdf>
+Package pdftex.def Info: Informe-014.pdf  used on input line 156.
 (pdftex.def)             Requested size: 386.95894pt x 386.97923pt.
 
 
-[13 <./Código_informe-012.pdf>]
-<Código_informe-013.pdf, id=122, 433.62pt x 433.62pt>
-File: Código_informe-013.pdf Graphic file (type pdf)
-<use Código_informe-013.pdf>
-Package pdftex.def Info: Código_informe-013.pdf  used on input line 513.
+[11 <./Informe-013.pdf>]
+<Informe-015.pdf, id=116, 433.62pt x 433.62pt>
+File: Informe-015.pdf Graphic file (type pdf)
+<use Informe-015.pdf>
+Package pdftex.def Info: Informe-015.pdf  used on input line 158.
 (pdftex.def)             Requested size: 386.95894pt x 386.97923pt.
 
 
-[14 <./Código_informe-013.pdf>]
-<Código_informe-014.pdf, id=132, 433.62pt x 433.62pt>
-File: Código_informe-014.pdf Graphic file (type pdf)
-<use Código_informe-014.pdf>
-Package pdftex.def Info: Código_informe-014.pdf  used on input line 548.
+[12 <./Informe-014.pdf>]
+<Informe-016.pdf, id=126, 433.62pt x 433.62pt>
+File: Informe-016.pdf Graphic file (type pdf)
+<use Informe-016.pdf>
+Package pdftex.def Info: Informe-016.pdf  used on input line 160.
 (pdftex.def)             Requested size: 386.95894pt x 386.97923pt.
 
 
-[15 <./Código_informe-014.pdf>]
-<Código_informe-015.pdf, id=142, 433.62pt x 433.62pt>
-File: Código_informe-015.pdf Graphic file (type pdf)
-<use Código_informe-015.pdf>
-Package pdftex.def Info: Código_informe-015.pdf  used on input line 583.
+[13 <./Informe-015.pdf>]
+<Informe-017.pdf, id=137, 433.62pt x 433.62pt>
+File: Informe-017.pdf Graphic file (type pdf)
+<use Informe-017.pdf>
+Package pdftex.def Info: Informe-017.pdf  used on input line 162.
 (pdftex.def)             Requested size: 386.95894pt x 386.97923pt.
 
 
-[16 <./Código_informe-015.pdf>]
-<Código_informe-016.pdf, id=152, 433.62pt x 433.62pt>
-File: Código_informe-016.pdf Graphic file (type pdf)
-<use Código_informe-016.pdf>
-Package pdftex.def Info: Código_informe-016.pdf  used on input line 618.
+[14 <./Informe-016.pdf>]
+<Informe-018.pdf, id=147, 433.62pt x 433.62pt>
+File: Informe-018.pdf Graphic file (type pdf)
+<use Informe-018.pdf>
+Package pdftex.def Info: Informe-018.pdf  used on input line 164.
 (pdftex.def)             Requested size: 386.95894pt x 386.97923pt.
 
 
-[17 <./Código_informe-016.pdf>]
-<Código_informe-017.pdf, id=162, 433.62pt x 433.62pt>
-File: Código_informe-017.pdf Graphic file (type pdf)
-<use Código_informe-017.pdf>
-Package pdftex.def Info: Código_informe-017.pdf  used on input line 653.
+[15 <./Informe-017.pdf>]
+<Informe-019.pdf, id=157, 433.62pt x 433.62pt>
+File: Informe-019.pdf Graphic file (type pdf)
+<use Informe-019.pdf>
+Package pdftex.def Info: Informe-019.pdf  used on input line 166.
 (pdftex.def)             Requested size: 386.95894pt x 386.97923pt.
 
 
-[18 <./Código_informe-017.pdf>]
-<Código_informe-018.pdf, id=172, 433.62pt x 433.62pt>
-File: Código_informe-018.pdf Graphic file (type pdf)
-<use Código_informe-018.pdf>
-Package pdftex.def Info: Código_informe-018.pdf  used on input line 688.
+[16 <./Informe-018.pdf>]
+<Informe-020.pdf, id=167, 433.62pt x 433.62pt>
+File: Informe-020.pdf Graphic file (type pdf)
+<use Informe-020.pdf>
+Package pdftex.def Info: Informe-020.pdf  used on input line 168.
 (pdftex.def)             Requested size: 386.95894pt x 386.97923pt.
 
 
-[19 <./Código_informe-018.pdf>]
-<Código_informe-019.pdf, id=184, 433.62pt x 433.62pt>
-File: Código_informe-019.pdf Graphic file (type pdf)
-<use Código_informe-019.pdf>
-Package pdftex.def Info: Código_informe-019.pdf  used on input line 723.
+[17 <./Informe-019.pdf>]
+<Informe-021.pdf, id=177, 433.62pt x 433.62pt>
+File: Informe-021.pdf Graphic file (type pdf)
+<use Informe-021.pdf>
+Package pdftex.def Info: Informe-021.pdf  used on input line 170.
 (pdftex.def)             Requested size: 386.95894pt x 386.97923pt.
 
 
-[20 <./Código_informe-019.pdf>]
-<Código_informe-020.pdf, id=194, 433.62pt x 433.62pt>
-File: Código_informe-020.pdf Graphic file (type pdf)
-<use Código_informe-020.pdf>
-Package pdftex.def Info: Código_informe-020.pdf  used on input line 758.
+[18 <./Informe-020.pdf>]
+<Informe-022.pdf, id=188, 433.62pt x 433.62pt>
+File: Informe-022.pdf Graphic file (type pdf)
+<use Informe-022.pdf>
+Package pdftex.def Info: Informe-022.pdf  used on input line 172.
 (pdftex.def)             Requested size: 386.95894pt x 386.97923pt.
 
 
-[21 <./Código_informe-020.pdf>]
-<Código_informe-021.pdf, id=204, 433.62pt x 433.62pt>
-File: Código_informe-021.pdf Graphic file (type pdf)
-<use Código_informe-021.pdf>
-Package pdftex.def Info: Código_informe-021.pdf  used on input line 793.
+[19 <./Informe-021.pdf>]
+<Informe-023.pdf, id=199, 433.62pt x 433.62pt>
+File: Informe-023.pdf Graphic file (type pdf)
+<use Informe-023.pdf>
+Package pdftex.def Info: Informe-023.pdf  used on input line 174.
 (pdftex.def)             Requested size: 386.95894pt x 386.97923pt.
 
 
-[22 <./Código_informe-021.pdf>]
-<Código_informe-022.pdf, id=214, 433.62pt x 433.62pt>
-File: Código_informe-022.pdf Graphic file (type pdf)
-<use Código_informe-022.pdf>
-Package pdftex.def Info: Código_informe-022.pdf  used on input line 828.
+[20 <./Informe-022.pdf>]
+<Informe-024.pdf, id=209, 433.62pt x 433.62pt>
+File: Informe-024.pdf Graphic file (type pdf)
+<use Informe-024.pdf>
+Package pdftex.def Info: Informe-024.pdf  used on input line 176.
 (pdftex.def)             Requested size: 386.95894pt x 386.97923pt.
 
 
-[23 <./Código_informe-022.pdf>]
-<Código_informe-023.pdf, id=224, 433.62pt x 433.62pt>
-File: Código_informe-023.pdf Graphic file (type pdf)
-<use Código_informe-023.pdf>
-Package pdftex.def Info: Código_informe-023.pdf  used on input line 863.
-(pdftex.def)             Requested size: 386.95894pt x 386.97923pt.
+[21 <./Informe-023.pdf>]
 
-
-[24 <./Código_informe-023.pdf>]
-<Imatge1.png, id=234, 640.64343pt x 603.0028pt>
+[22 <./Informe-024.pdf>]
+<Imatge1.png, id=228, 640.64343pt x 603.0028pt>
 File: Imatge1.png Graphic file (type png)
 <use Imatge1.png>
-Package pdftex.def Info: Imatge1.png  used on input line 873.
+Package pdftex.def Info: Imatge1.png  used on input line 187.
 (pdftex.def)             Requested size: 338.5863pt x 318.69745pt.
-<Imatge2.png, id=236, 634.62094pt x 602.25pt>
+<Imatge2.png, id=230, 634.62094pt x 602.25pt>
 File: Imatge2.png Graphic file (type png)
 <use Imatge2.png>
-Package pdftex.def Info: Imatge2.png  used on input line 882.
+Package pdftex.def Info: Imatge2.png  used on input line 196.
 (pdftex.def)             Requested size: 338.5863pt x 321.32295pt.
 
 
-[25 <./Imatge1.png>]
+[23 <./Imatge1.png>]
 
-[26 <./Imatge2.png>]
+[24 <./Imatge2.png>]
 
-[27] (./Código_informe.aux
+[25] (./Informe.aux
 LaTeX Info: Redefining \. on input line 8.
 LaTeX Info: Redefining \% on input line 8.
 )
@@ -508,18 +490,18 @@ L3 programming layer <2024-05-27>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 5472 strings out of 475543
- 95440 string characters out of 5775459
- 1936908 words of memory out of 5000000
- 28033 multiletter control sequences out of 15000+600000
+ 5466 strings out of 475526
+ 92339 string characters out of 5775061
+ 1937908 words of memory out of 5000000
+ 28034 multiletter control sequences out of 15000+600000
  567473 words of font info for 59 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 72i,8n,79p,1290b,365s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 72i,8n,79p,1282b,365s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <c:/Users/mario/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1000.600pk> <c:/Users/mario/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> <c:/Users/mario/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> <c:/Users/mario/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/tcst1000.600pk> <c:/Users/mario/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecst1000.600pk> <c:/Users/mario/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> <c:/Users/mario/AppData/Roaming/TinyTeX/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1728.600pk>
-Output written on Código_informe.pdf (27 pages, 281428 bytes).
+Output written on Informe.pdf (25 pages, 253435 bytes).
 PDF statistics:
- 523 PDF objects out of 1000 (max. 8388607)
- 174 compressed objects within 2 object streams
+ 480 PDF objects out of 1000 (max. 8388607)
+ 170 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  120 words of extra memory for PDF output out of 10000 (max. 10000000)
 
